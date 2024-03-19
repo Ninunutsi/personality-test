@@ -1,0 +1,115 @@
+{
+    "questions": [
+      {
+        "question_number": 1,
+        "question_text": "როგორ დაახასიათებდი საკუთარ თავს ორი სიტყვით?",
+        "options": [
+          {"answer": "ძალიან ორგანიზებული", "attribute": "PM"},
+          {"answer": "დეტალებზე ორიენტირებული", "attribute": "QA"},
+          {"answer": "შემოქმედი და გემოვნებიანი", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "ლოგიკურად მოაზროვნე", "attribute": "Backend"},
+          {"answer": "მიზანდასახული და მშრომელი", "attribute": "Frontend/ნებისმიერი"}
+        ]
+      },
+      {
+        "question_number": 2,
+        "question_text": "„შუა ქალაქის“ რომელი პერსონაჟი იქნებოდი?",
+        "options": [
+          {"answer": "ირაკლი", "attribute": "PM"},
+          {"answer": "თამარი", "attribute": "QA"},
+          {"answer": "ანაანო", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "ვახო", "attribute": "Backend"},
+          {"answer": "ლაშა", "attribute": "Frontend/ნებისმიერი"}
+        ]
+      },
+      {
+        "question_number": 3,
+        "question_text": "რომელ ქვეყანაში იმოგზაურებდი?",
+        "options": [
+          {"answer": "გერმანია", "attribute": "PM"},
+          {"answer": "საფრანგეთი", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "იაპონია", "attribute": "Backend"},
+          {"answer": "აშშ", "attribute": "Frontend/ნებისმიერი"},
+          {"answer": "შვეიცარია", "attribute": "QA"}
+        ]
+      },
+      {
+        "question_number": 4,
+        "question_text": "რომელია შენი საყვარელი კერძი?",
+        "options": [
+          {"answer": "აჯაფსანდალი", "attribute": "Frontend/ნებისმიერი"},
+          {"answer": "სუში", "attribute": "PM"},
+          {"answer": "ბელგიური ვაფლი", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "კუბდარი", "attribute": "Backend"},
+          {"answer": "ჩაქაფული", "attribute": "PM"}
+        ]
+      },
+      {
+        "question_number": 5,
+        "question_text": "რომელი თამაში გიყვარდა ბავშვობაში ყველაზე მეტად?",
+        "options": [
+          {"answer": "დაჭერობანა", "attribute": "QA"},
+          {"answer": "დამალობანა", "attribute": "Backend"},
+          {"answer": "კლასობანა", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "წრეში ბურთი", "attribute": "PM"},
+          {"answer": "ამის პატრონმა რა ქნას?", "attribute": "Frontend/ნებისმიერი"}
+        ]
+      },
+      {
+        "question_number": 6,
+        "question_text": "რომელია შენი საყვარელი ფერი?",
+        "options": [
+          {"answer": "შავი", "attribute": "Backend"},
+          {"answer": "წითელი", "attribute": "PM"},
+          {"answer": "თეთრი", "attribute": "Frontend/ნებისმიერი"},
+          {"answer": "ყვითელი", "attribute": "QA"},
+          {"answer": "ყველა ზემოთ ჩამოთვლილი და არამხოლოდ", "attribute": "UI/UX&Graphic Design"}
+        ]
+      },
+      {
+        "question_number": 7,
+        "question_text": "შენი აზრით, რომელია ყველაზე სანახაობრივი ქართული ცეკვა?",
+        "options": [
+          {"answer": "ხორუმი", "attribute": "PM"},
+          {"answer": "ქართული", "attribute": "Frontend/ნებისმიერი"},
+          {"answer": "სამაია", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "აჭარული", "attribute": "QA"},
+          {"answer": "მთიულური", "attribute": "Backend"}
+        ]
+      },
+      {
+        "question_number": 8,
+        "question_text": "ჰარი პოტერის რომელი პერსონაჟის თვისებებია შენთან ყველაზე ახლოს?",
+        "options": [
+          {"answer": "ჰარი", "attribute": "Backend"},
+          {"answer": "ჰერმიონი", "attribute": "PM"},
+          {"answer": "რონი", "attribute": "Frontend/ნებისმიერი"},
+          {"answer": "პროფესორი სნეიპი", "attribute": "QA"},
+          {"answer": "პროფესორი მინერვა მაკგონაგალი", "attribute": "UI/UX&Graphic Design"}
+        ]
+      },
+      {
+        "question_number": 9,
+        "question_text": "როგორ ატარებ თავისუფალ დროს?",
+        "options": [
+          {"answer": "ფილმს ვუყურებ", "attribute": "Frontend/ნებისმიერი"},
+          {"answer": "კომპიუტერულ თამაშებს ვთამაშობ", "attribute": "Backend"},
+          {"answer": "მეგობრებთან ერთად გართობას ვგეგმავ", "attribute": "PM"},
+          {"answer": "ვხატავ, მუსიკას ვუსმენ ან კულტურულ ღონისძიებებს ვესწრები", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "უცხო ადგილებში ვსეირნობ", "attribute": "QA"}
+        ]
+      },
+      {
+        "question_number": 10,
+        "question_text": "საიდან და როგორ გირჩევნია მუშაობა?",
+        "options": [
+          {"answer": "ოფისში ხალხმრავალ გარემოში", "attribute": "PM"},
+          {"answer": "სახლიდან დისტანციურად", "attribute": "Backend"},
+          {"answer": "ფრილანსერად, მოქნილი გრაფიკით", "attribute": "UI/UX&Graphic Design"},
+          {"answer": "დისტანციურად მირჩევნია, მარა ოფისშიც არაუშავს", "attribute": "Frontend/ნებისმიერი"},
+          {"answer": "როგორც საქმე მოითხოვს, მთავარია შედეგი", "attribute": "QA"}
+        ]
+      }
+    ]
+  }
+  
