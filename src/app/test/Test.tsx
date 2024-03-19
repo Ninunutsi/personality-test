@@ -1,3 +1,5 @@
+import React from "react";
+
 import React from 'react'
 import QuestionForm from '../components/question-form/QuestionForm'
 
@@ -7,4 +9,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default Test;
