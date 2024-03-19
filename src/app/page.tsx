@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import logo from '../../public/assets/logo.png'
-import BtnComponent from './components/btn-component';
+import BtnComponent from './components/btn-component/btn-component';
 import { Box, Typography } from '@mui/material';
 export default function Home() {
   return (
