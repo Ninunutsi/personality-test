@@ -12,16 +12,19 @@ import {
 import { TestBoxCard, TestLabel } from "@/app/test/TestStyle";
 import BtnComponent from "../button/btn-component";
 import { useRouter } from "next/navigation";
+import { useValuesContext } from "@/app/context/ValuesContext";
 
 const QuestionForm = () => {
   const [data] = useState(QuestionsData);
   const [questionsIndex, setQuestionsIndex] = useState<number>(0);
   const [value, setValue] = useState<string>("");
+  const {attributes, setAttributes} = useValuesContext()
 
   const router = useRouter();
 
   const questions = data.questions;
   const question = questions[questionsIndex];
+  const{question_text, question_number, gif } = question
 
   const onFormSubmit = (): void => {
     if (!value) return;
@@ -30,7 +33,7 @@ const QuestionForm = () => {
     setValue("");
 
     if (questionsIndex >= questions.length - 1) {
-      setQuestionsIndex((prev) => prev - 1); // ეს რაღაც ვიბოდიალე
+      setQuestionsIndex((prev) => prev - 1); 
       router.push("/results");
     }
   };
@@ -39,22 +42,22 @@ const QuestionForm = () => {
     setValue(event.target.value);
   };
 
-  console.log(value); // ილოგება ატრიბუტს
+  console.log(value);
 
   return (
     <TestBoxCard height={400} width={780}>
-      <FormControl key={question.question_number}>
-        <TestLabel focused={false}>{question.question_text}</TestLabel>
+      <FormControl key={question_number}>
+        <TestLabel focused={false}>{question_text}</TestLabel>
         <Box className="radioBoxStyle">
-          <img src={question.gif} alt={question.question_text} />
+          <img src={question.gif} alt={question_text} />
           <RadioGroup onChange={handleRadioChange}>
-            {question.options.map((option, index) => (
+            {question.options.map(({answer, attributeVal}, index) => (
               <FormControlLabel
                 className="formControl"
                 key={index}
-                value={option.attributeVal}
+                value={attributeVal}
                 control={<Radio />}
-                label={option.answer}
+                label={answer}
               />
             ))}
           </RadioGroup>

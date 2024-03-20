@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import {ValuesProvider} from './context/ValuesContext'
 import { Inter } from "next/font/google";
 import { BgBox } from "./mainpage/HomePageStyle";
 
@@ -17,9 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ValuesProvider>
       <body className={inter.className}>
         <BgBox>{children}</BgBox>
       </body>
+      </ValuesProvider>
+      
     </html>
   );
 }
