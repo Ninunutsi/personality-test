@@ -23,9 +23,9 @@ const HomePage = () => {
           გინდა ისწავლო რაც მართლა გამოგადგება, მაგრამ არ იცი საიდან დაიწყო?
           მაშინ
         </Typography>
-        <form onSubmit={handleSubmit}>
+        <Box component="form" onSubmit={handleSubmit}>
           <BtnComponent text="გააკეთე ტესტი" href="/test" />
-        </form>
+        </Box>
       </BoxStyle>
     </Box>
   );
