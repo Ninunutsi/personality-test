@@ -1,0 +1,35 @@
+{
+    "results": [
+    {
+        "title_id": 1,
+        "title": "PM",
+        "text": "გილოოოოცააავ! შენ შეგეფერება პროექტების მართვა!", 
+        "gif": "/assets/result_GIFs/giphy (3).gif"
+    },
+    {
+        "title_id": 2,
+        "title": "QA",
+        "text": "გილოოოოცააავ! შენ შეგეფერება QA!", 
+        "gif": "/assets/result_GIFs/giphy (4).gif"
+    },
+    {
+        "title_id": 3,
+        "title": "UI/UX&Graphic Design",
+        "text": "გილოოოოცააავ! შენ შეგეფერება UI/UX&Graphic Design!", 
+        "gif": "/assets/result_GIFs/giphy (2).gif"
+    },
+    {
+        "title_id": 4,
+        "title": "Backend",
+        "text": "გილოოოოცააავ! შენ შეგეფერება Backend!", 
+        "gif": "/assets/result_GIFs/giphy (1).gif"
+    },
+    {
+        "title_id": 5,
+        "title": "Frontend/ნებისმიერი",
+        "text": "Frontend/ნებისმიერი!", 
+        "gif": "/assets/result_GIFs/giphy.gif"
+    }
+    ]
+}
+  

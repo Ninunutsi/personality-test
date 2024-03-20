@@ -1,11 +1,12 @@
 'use client'
-
 import React, { useEffect, useState } from "react";
 import { useValuesContext } from "../context/ValuesContext";
 import { Typography } from "@mui/material";
+import Image from "next/image";
+import resultsData from '../../data/results.json'
 
 const ResultsPage = () => {
-  const {attributes, setAttributes} = useValuesContext()
+  const {attributes} = useValuesContext()
   const [result, setResult] = useState<string>("'")
 
   useEffect(() => {
@@ -26,15 +27,20 @@ const ResultsPage = () => {
       });
   
       if (equalCounts) {
-        setResult("პასუხების ატრიბუტების რაოდენობა ერთმანეთს უდრიდა და აჩის უნდა ვკითხოთ ასეთ დროს რას ვშვებით")
+        setResult("პასუხების ატრიბუტების რაოდენობა ერთმანეთს უდრის და აჩის უნდა ვკითხოთ ასეთ დროს რას ვშვებით")
       } else {
         setResult(mostRepeatedWord)
       }
 
   }, [])
-
-
+  const matchingResult = resultsData.results.find((item) => item.title === result);
   return <div>
+    {matchingResult && (
+      <>
+      <Image src={matchingResult.gif} alt="gif" width={400} height={400}/>
+      <Typography>{matchingResult.text}</Typography>
+      </>
+    )}
     <Typography sx={{color: "white", fontSize: '40px'}}>{result}</Typography>
   </div>;
 };
