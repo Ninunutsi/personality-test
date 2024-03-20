@@ -67,7 +67,7 @@ const QuestionForm = () => {
   return (
     <TestBoxCard>
       <TestLabel focused={false}>{question_text}</TestLabel>
-      <form onSubmit={onFormSubmit} key={question_number}>
+      <Box component="form" onSubmit={onFormSubmit} key={question_number}>
         <Box className="radioBoxStyle">
           <img src={gif} alt={question_text} />
           <RadioGroup onChange={handleRadioChange} sx={{ height: 320 }}>
@@ -81,7 +81,7 @@ const QuestionForm = () => {
                   label={answer}
                 />
                 {value === attributeVal && (
-                  <Typography variant="body2" mb={1}>
+                  <Typography variant="body2" lineHeight={2.5}>
                     {radioText}
                   </Typography>
                 )}
@@ -92,7 +92,7 @@ const QuestionForm = () => {
         <Box mt={2} mr={2} alignSelf={"end"}>
           <BtnComponent text="შემდეგი" error={error} />
         </Box>
-      </form>
+      </Box>
     </TestBoxCard>
   );
 };

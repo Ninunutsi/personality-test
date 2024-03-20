@@ -3,6 +3,7 @@
 export interface IOptions {
   answer: string;
   attribute: string;
+  text: string;
 }
 
 export interface QuestionProps {
@@ -22,8 +23,7 @@ export interface IBtn {
   text: string;
   href?: string | undefined;
   onClick?: () => void;
-  error?: boolean
-
+  error?: boolean;
 }
 
 // useRequest Interface
