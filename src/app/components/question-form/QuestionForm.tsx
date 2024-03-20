@@ -29,7 +29,7 @@ const QuestionForm = () => {
   const onFormSubmit = (): void => {
     if (!value) return;
     setQuestionsIndex((prev) => prev + 1);
-
+    setAttributes([...attributes, value])
     setValue("");
 
     if (questionsIndex >= questions.length - 1) {
@@ -41,8 +41,6 @@ const QuestionForm = () => {
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
-
-  console.log(value);
 
   return (
     <TestBoxCard height={400} width={780}>
