@@ -7,6 +7,7 @@ export const ValuesProvider = ({ children }) => {
   const [attributes, setAttributes] = useState([]);
   const [auth, setAuth] = useState(false);
 
+
   return (
     <ValContext.Provider value={{ attributes, setAttributes, setAuth, auth }}>
       {children}
