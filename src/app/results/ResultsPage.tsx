@@ -1,7 +1,10 @@
 import React from "react";
+import Result from "../components/result";
 
 const ResultsPage = () => {
-  return <div>ResultsPage</div>;
+  return <div>
+   <Result />
+  </div>;
 };
 
 export default ResultsPage;
