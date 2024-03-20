@@ -2,16 +2,24 @@
 import { useValuesContext } from '@/app/context/ValuesContext'
 import React, { useEffect, useState } from 'react'
 import resultsData from '../../../data/results.json'
-import Image from 'next/image'
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import BtnComponent from '../button/btn-component'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import Countdown from '../countdown'
+import { resultTypographyStyles, resultTextStyles, resultLinkContainerStyles, fadeInStyles, resultBoxStyles } from './resultStyles';
 
-const Result = () => {
+const Result: React.FC = () => {
     const {attributes, auth} = useValuesContext()
     const [result, setResult] = useState<string>("'")
+    const [showCountdown, setShowCountdown] = useState(true); // State to manage countdown visibility
     const router = useRouter()
+
+    useEffect(() => {
+      setTimeout(() => {
+        setShowCountdown(false)
+      }, 3000)
+    }, [])
 
     useEffect(() => {
         if(!auth){
@@ -48,18 +56,33 @@ const Result = () => {
     console.log(attributes)
     
     const matchingResult = resultsData.results.find((item) => item.title === result);
-    return <div>
-      {matchingResult && (
-        <>
-        <Image src={matchingResult.gif} alt="gif" width={400} height={400}/>
-        <Typography sx={{color: "white", fontSize: '40px'}}>{matchingResult.text}</Typography>
-        <Link href={matchingResult?.link} target='_blank'>{result}</Link>
-        </>
-      )}
-      <Typography sx={{color: "white", fontSize: '40px'}}>{result}</Typography>
+    // ეს სავარაუდოდ ამოსაღები იქნება მაგრამ ცდუნებას ვერ გავუძელი და მაინც გავაკეთეეეეეე
+    if(showCountdown) return <Countdown />
 
-      <BtnComponent text='მიიღე გათამაშებაში მონაწილეობა'/>
-    </div>;
+    return (
+        <div>
+            {matchingResult && (
+                <Box sx={{height: "100vh", display: 'flex', alignItems: 'center', justifyContent: 'center', ...fadeInStyles}}>
+                  <Box sx={{ ...resultBoxStyles}} pb={'1rem'}>
+                    <Typography sx={{ ...resultTypographyStyles }} p={"1rem 0"}>{result}</Typography>
+                    <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem', padding: '0 1.5rem'}}>
+                      <Box>
+                        <img src={matchingResult.gif} alt="gif" width={'100%'} style={{borderRadius: '0.5rem', boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px"}}/>
+                      </Box>
+                      <Box >
+                        <Typography sx={{ ...resultTextStyles }}>{matchingResult.text}</Typography>
+                        <Typography sx={{ ...resultTextStyles }}>მეტის სანახავად შეგიძლია ეწვიო: </Typography>
+                        <Box sx={{...resultLinkContainerStyles}}>
+                        <Link href={matchingResult?.link} target='_blank' style={{color: "white"}}>{result}</Link>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <BtnComponent text='მიიღე გათამაშებაში მონაწილეობა'/>
+                </Box>
+                </Box>
+            )}
+        </div>
+    );
 }
 
-export default Result
+export default Result;
