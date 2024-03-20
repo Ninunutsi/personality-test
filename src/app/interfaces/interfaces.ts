@@ -20,9 +20,10 @@ export interface QuestionFormProps {
 
 export interface IBtn {
   text: string;
-  href?: string;
+  href?: string | undefined;
   onClick?: () => void;
-  checked?: string | boolean;
+  error?: boolean
+
 }
 
 // useRequest Interface

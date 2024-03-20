@@ -4,10 +4,20 @@ import React, { useEffect, useState } from 'react'
 import resultsData from '../../../data/results.json'
 import Image from 'next/image'
 import { Typography } from '@mui/material'
+import BtnComponent from '../button/btn-component'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Result = () => {
-    const {attributes} = useValuesContext()
+    const {attributes, auth} = useValuesContext()
     const [result, setResult] = useState<string>("'")
+    const router = useRouter()
+
+    useEffect(() => {
+        if(!auth){
+          router.push('/')
+        }
+    }, [auth])
   
     useEffect(() => {
         let counts: { [key: string]: number } = {};
@@ -25,23 +35,30 @@ const Result = () => {
             equalCounts = true; 
           }
         });
-    
+        const random = Math.floor(Math.random() * 10) + 1  
+        console.log(random)
         if (equalCounts) {
-          setResult("პასუხების ატრიბუტების რაოდენობა ერთმანეთს უდრის და აჩის უნდა ვკითხოთ ასეთ დროს რას ვშვებით")
+          setResult(attributes[random])
         } else {
           setResult(mostRepeatedWord)
         }
   
     }, [])
+
+    console.log(attributes)
+    
     const matchingResult = resultsData.results.find((item) => item.title === result);
     return <div>
       {matchingResult && (
         <>
         <Image src={matchingResult.gif} alt="gif" width={400} height={400}/>
         <Typography sx={{color: "white", fontSize: '40px'}}>{matchingResult.text}</Typography>
+        <Link href={matchingResult?.link} target='_blank'>{result}</Link>
         </>
       )}
       <Typography sx={{color: "white", fontSize: '40px'}}>{result}</Typography>
+
+      <BtnComponent text='მიიღე გათამაშებაში მონაწილეობა'/>
     </div>;
 }
 
