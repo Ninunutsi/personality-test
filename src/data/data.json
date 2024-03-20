@@ -5,16 +5,16 @@
       "question_text": "როგორ დაახასიათებდი საკუთარ თავს ორი სიტყვით?",
       "gif": "/assets/GIFs/gif1.gif",
       "options": [
-        { "answer": "ძალიან ორგანიზებული", "attribute": "PM" },
-        { "answer": "დეტალებზე ორიენტირებული", "attribute": "QA" },
+        { "answer": "ძალიან ორგანიზებული", "attributeVal": "PM" },
+        { "answer": "დეტალებზე ორიენტირებული", "attributeVal": "QA" },
         {
           "answer": "შემოქმედი და გემოვნებიანი",
-          "attribute": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design"
         },
-        { "answer": "ლოგიკურად მოაზროვნე", "attribute": "Backend" },
+        { "answer": "ლოგიკურად მოაზროვნე", "attributeVal": "Backend" },
         {
           "answer": "მიზანდასახული და მშრომელი",
-          "attribute": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი"
         }
       ]
     },
@@ -23,11 +23,11 @@
       "question_text": "„შუა ქალაქის“ რომელი პერსონაჟი იქნებოდი?",
       "gif": "/assets/GIFs/gif2.gif",
       "options": [
-        { "answer": "ირაკლი", "attribute": "PM" },
-        { "answer": "თამარი", "attribute": "QA" },
-        { "answer": "ანაანო", "attribute": "UI/UX&Graphic Design" },
-        { "answer": "ვახო", "attribute": "Backend" },
-        { "answer": "ლაშა", "attribute": "Frontend/ნებისმიერი" }
+        { "answer": "ირაკლი", "attributeVal": "PM" },
+        { "answer": "თამარი", "attributeVal": "QA" },
+        { "answer": "ანაანო", "attributeVal": "UI/UX&Graphic Design" },
+        { "answer": "ვახო", "attributeVal": "Backend" },
+        { "answer": "ლაშა", "attributeVal": "Frontend/ნებისმიერი" }
       ]
     },
     {
@@ -35,11 +35,11 @@
       "question_text": "რომელ ქვეყანაში იმოგზაურებდი?",
       "gif": "/assets/GIFs/gif3.gif",
       "options": [
-        { "answer": "გერმანია", "attribute": "PM" },
-        { "answer": "საფრანგეთი", "attribute": "UI/UX&Graphic Design" },
-        { "answer": "იაპონია", "attribute": "Backend" },
-        { "answer": "აშშ", "attribute": "Frontend/ნებისმიერი" },
-        { "answer": "შვეიცარია", "attribute": "QA" }
+        { "answer": "გერმანია", "attributeVal": "PM" },
+        { "answer": "საფრანგეთი", "attributeVal": "UI/UX&Graphic Design" },
+        { "answer": "იაპონია", "attributeVal": "Backend" },
+        { "answer": "აშშ", "attributeVal": "Frontend/ნებისმიერი" },
+        { "answer": "შვეიცარია", "attributeVal": "QA" }
       ]
     },
     {
@@ -47,11 +47,11 @@
       "question_text": "რომელია შენი საყვარელი კერძი?",
       "gif": "/assets/GIFs/gif4.gif",
       "options": [
-        { "answer": "აჯაფსანდალი", "attribute": "Frontend/ნებისმიერი" },
-        { "answer": "სუში", "attribute": "PM" },
-        { "answer": "ბელგიური ვაფლი", "attribute": "UI/UX&Graphic Design" },
-        { "answer": "კუბდარი", "attribute": "Backend" },
-        { "answer": "ჩაქაფული", "attribute": "PM" }
+        { "answer": "აჯაფსანდალი", "attributeVal": "Frontend/ნებისმიერი" },
+        { "answer": "სუში", "attributeVal": "PM" },
+        { "answer": "ბელგიური ვაფლი", "attributeVal": "UI/UX&Graphic Design" },
+        { "answer": "კუბდარი", "attributeVal": "Backend" },
+        { "answer": "ჩაქაფული", "attributeVal": "QA" }
       ]
     },
     {
@@ -59,13 +59,13 @@
       "question_text": "რომელი თამაში გიყვარდა ბავშვობაში ყველაზე მეტად?",
       "gif": "/assets/GIFs/gif5.gif",
       "options": [
-        { "answer": "დაჭერობანა", "attribute": "QA" },
-        { "answer": "დამალობანა", "attribute": "Backend" },
-        { "answer": "კლასობანა", "attribute": "UI/UX&Graphic Design" },
-        { "answer": "წრეში ბურთი", "attribute": "PM" },
+        { "answer": "დაჭერობანა", "attributeVal": "QA" },
+        { "answer": "დამალობანა", "attributeVal": "Backend" },
+        { "answer": "კლასობანა", "attributeVal": "UI/UX&Graphic Design" },
+        { "answer": "წრეში ბურთი", "attributeVal": "PM" },
         {
           "answer": "ამის პატრონმა რა ქნას?",
-          "attribute": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი"
         }
       ]
     },
@@ -74,13 +74,13 @@
       "question_text": "რომელია შენი საყვარელი ფერი?",
       "gif": "/assets/GIFs/gif6.gif",
       "options": [
-        { "answer": "შავი", "attribute": "Backend" },
-        { "answer": "წითელი", "attribute": "PM" },
-        { "answer": "თეთრი", "attribute": "Frontend/ნებისმიერი" },
-        { "answer": "ყვითელი", "attribute": "QA" },
+        { "answer": "შავი", "attributeVal": "Backend" },
+        { "answer": "წითელი", "attributeVal": "PM" },
+        { "answer": "თეთრი", "attributeVal": "Frontend/ნებისმიერი" },
+        { "answer": "ყვითელი", "attributeVal": "QA" },
         {
           "answer": "ყველა ზემოთ ჩამოთვლილი და არამხოლოდ",
-          "attribute": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design"
         }
       ]
     },
@@ -89,11 +89,11 @@
       "question_text": "შენი აზრით, რომელია ყველაზე სანახაობრივი ქართული ცეკვა?",
       "gif": "/assets/GIFs/gif7.gif",
       "options": [
-        { "answer": "ხორუმი", "attribute": "PM" },
-        { "answer": "ქართული", "attribute": "Frontend/ნებისმიერი" },
-        { "answer": "სამაია", "attribute": "UI/UX&Graphic Design" },
-        { "answer": "აჭარული", "attribute": "QA" },
-        { "answer": "მთიულური", "attribute": "Backend" }
+        { "answer": "ხორუმი", "attributeVal": "PM" },
+        { "answer": "ქართული", "attributeVal": "Frontend/ნებისმიერი" },
+        { "answer": "სამაია", "attributeVal": "UI/UX&Graphic Design" },
+        { "answer": "აჭარული", "attributeVal": "QA" },
+        { "answer": "მთიულური", "attributeVal": "Backend" }
       ]
     },
     {
@@ -101,13 +101,13 @@
       "question_text": "ჰარი პოტერის რომელი პერსონაჟის თვისებებია შენთან ყველაზე ახლოს?",
       "gif": "/assets/GIFs/gif8.gif",
       "options": [
-        { "answer": "ჰარი", "attribute": "Backend" },
-        { "answer": "ჰერმიონი", "attribute": "PM" },
-        { "answer": "რონი", "attribute": "Frontend/ნებისმიერი" },
-        { "answer": "პროფესორი სნეიპი", "attribute": "QA" },
+        { "answer": "ჰარი", "attributeVal": "Backend" },
+        { "answer": "ჰერმიონი", "attributeVal": "PM" },
+        { "answer": "რონი", "attributeVal": "Frontend/ნებისმიერი" },
+        { "answer": "პროფესორი სნეიპი", "attributeVal": "QA" },
         {
           "answer": "პროფესორი მინერვა მაკგონაგალი",
-          "attribute": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design"
         }
       ]
     },
@@ -116,14 +116,20 @@
       "question_text": "როგორ ატარებ თავისუფალ დროს?",
       "gif": "/assets/GIFs/gif9.gif",
       "options": [
-        { "answer": "ფილმს ვუყურებ", "attribute": "Frontend/ნებისმიერი" },
-        { "answer": "კომპიუტერულ თამაშებს ვთამაშობ", "attribute": "Backend" },
-        { "answer": "მეგობრებთან ერთად გართობას ვგეგმავ", "attribute": "PM" },
+        { "answer": "ფილმს ვუყურებ", "attributeVal": "Frontend/ნებისმიერი" },
+        {
+          "answer": "კომპიუტერულ თამაშებს ვთამაშობ",
+          "attributeVal": "Backend"
+        },
+        {
+          "answer": "მეგობრებთან ერთად გართობას ვგეგმავ",
+          "attributeVal": "PM"
+        },
         {
           "answer": "ვხატავ, მუსიკას ვუსმენ ან კულტურულ ღონისძიებებს ვესწრები",
-          "attribute": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design"
         },
-        { "answer": "უცხო ადგილებში ვსეირნობ", "attribute": "QA" }
+        { "answer": "უცხო ადგილებში ვსეირნობ", "attributeVal": "QA" }
       ]
     },
     {
@@ -131,19 +137,19 @@
       "question_text": "საიდან და როგორ გირჩევნია მუშაობა?",
       "gif": "/assets/GIFs/gif10.gif",
       "options": [
-        { "answer": "ოფისში ხალხმრავალ გარემოში", "attribute": "PM" },
-        { "answer": "სახლიდან დისტანციურად", "attribute": "Backend" },
+        { "answer": "ოფისში ხალხმრავალ გარემოში", "attributeVal": "PM" },
+        { "answer": "სახლიდან დისტანციურად", "attributeVal": "Backend" },
         {
           "answer": "ფრილანსერად, მოქნილი გრაფიკით",
-          "attribute": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design"
         },
         {
           "answer": "დისტანციურად მირჩევნია, მარა ოფისშიც არაუშავს",
-          "attribute": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი"
         },
         {
           "answer": "როგორც საქმე მოითხოვს, მთავარია შედეგი",
-          "attribute": "QA"
+          "attributeVal": "QA"
         }
       ]
     }
