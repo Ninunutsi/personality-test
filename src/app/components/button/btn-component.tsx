@@ -6,8 +6,9 @@ import { IBtn } from "@/app/interfaces/interfaces";
 import { useRouter } from "next/navigation";
 import { Box } from "@mui/material";
 
-const BtnComponent: React.FC<IBtn> = ({ text, href, error}) => {
-  const router = useRouter(); 
+const BtnComponent: React.FC<IBtn> = ({ text, href, error }) => {
+  const router = useRouter();
+
   const startQuiz = () => {
     href && router.push(href);
   };
