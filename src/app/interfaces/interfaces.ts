@@ -12,12 +12,17 @@ export interface QuestionProps {
   options: IOptions[];
 }
 
+export interface QuestionFormProps {
+  question: QuestionProps;
+}
+
 // Button interface
 
 export interface IBtn {
   text: string;
   href?: string;
   onClick?: () => void;
+  checked?: string | boolean;
 }
 
 // useRequest Interface

@@ -1,12 +1,15 @@
 import React from "react";
 
-import React from 'react'
-import QuestionForm from '../components/question-form/QuestionForm'
+import { Box } from "@mui/material";
+import { BoxTestStyle } from "./TestStyle";
+import QuestionForm from "../components/question-form/QuestionForm";
 
 const Test = () => {
   return (
-    <div><QuestionForm/></div>
-  )
-}
+    <BoxTestStyle>
+      <QuestionForm />
+    </BoxTestStyle>
+  );
+};
 
 export default Test;

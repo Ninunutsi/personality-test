@@ -3,7 +3,6 @@
 import { Box, Button, styled } from "@mui/material";
 
 export const BoxStyle = styled(Box)({
-  height: "100%",
   minHeight: "100vh",
   display: "flex",
   alignItems: "center",
@@ -30,6 +29,9 @@ export const ButtonStyle = styled(Button)({
 
 export const BgBox = styled(Box)({
   minHeight: "100vh",
+  display: "flex",
+  justifyContent: "center",
+  alignContent: "center",
   backgroundImage: `url("assets/mainBG.svg")`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
