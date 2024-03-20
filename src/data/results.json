@@ -4,31 +4,37 @@
         "title_id": 1,
         "title": "PM",
         "text": "გილოოოოცააავ! შენ შეგეფერება პროექტების მართვა!", 
-        "gif": "/assets/result_GIFs/giphy (3).gif"
+        "gif": "/assets/result_GIFs/giphy (3).gif",
+        "link": "https://www.skillwill.ge/buy-course/IT-Project-Management-and-Analysis/85"
+
     },
     {
         "title_id": 2,
         "title": "QA",
         "text": "გილოოოოცააავ! შენ შეგეფერება QA!", 
-        "gif": "/assets/result_GIFs/giphy (4).gif"
+        "gif": "/assets/result_GIFs/giphy (4).gif",
+        "link": "https://www.skillwill.ge/buy-course/Digital-Product-Testing/86"
     },
     {
         "title_id": 3,
         "title": "UI/UX&Graphic Design",
         "text": "გილოოოოცააავ! შენ შეგეფერება UI/UX&Graphic Design!", 
-        "gif": "/assets/result_GIFs/giphy (2).gif"
+        "gif": "/assets/result_GIFs/giphy (2).gif",
+        "link": "https://www.skillwill.ge/buy-course/Graphic-Design-and-UX-UI/84"
     },
     {
         "title_id": 4,
         "title": "Backend",
         "text": "გილოოოოცააავ! შენ შეგეფერება Backend!", 
-        "gif": "/assets/result_GIFs/giphy (1).gif"
+        "gif": "/assets/result_GIFs/giphy (1).gif",
+        "link": "https://www.skillwill.ge/buy-course/Backend-Development--Python/82"
     },
     {
         "title_id": 5,
         "title": "Frontend/ნებისმიერი",
-        "text": "Frontend/ნებისმიერი!", 
-        "gif": "/assets/result_GIFs/giphy.gif"
+        "text": "გილოოოოცააავ! შენ შეგეფერება fronttttiii!", 
+        "gif": "/assets/result_GIFs/giphy.gif",
+        "link": "https://www.skillwill.ge/buy-course/Frontend-Development--React-/80"
     }
     ]
 }

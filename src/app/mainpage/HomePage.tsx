@@ -1,11 +1,18 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import logo from "../../../public/assets/whiteLogo.svg";
 import BtnComponent from "../components/button/btn-component";
 import { Box, Typography } from "@mui/material";
 import { BoxStyle } from "./HomePageStyle";
+import { useValuesContext } from "../context/ValuesContext";
 
 const HomePage = () => {
+  const {setAuth} = useValuesContext()
+  const handleSubmit = (e:any) => {
+    e.preventDefault()
+    setAuth(true)
+  }
   return (
     <Box>
       <BoxStyle component="main">
@@ -14,7 +21,7 @@ const HomePage = () => {
           გინდა ისწავლო რაც მართლა გამოგადგება, მაგრამ არ იცი საიდან დაიწყო?
           მაშინ
         </Typography>
-        <BtnComponent text="გააკეთე ტესტი" href="/test" />
+        <form onSubmit={handleSubmit}><BtnComponent text="გააკეთე ტესტი" href="/test" /></form>
       </BoxStyle>
     </Box>
   );
