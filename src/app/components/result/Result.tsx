@@ -66,7 +66,9 @@ const Result: React.FC = () => {
     (item) => item.title === result
   );
   // ეს სავარაუდოდ ამოსაღები იქნება მაგრამ ცდუნებას ვერ გავუძელი და მაინც გავაკეთეეეეეე
-  if (showCountdown && auth) return <Countdown />;
+  if (showCountdown && auth && matchingResult) return <Countdown />;
+
+  if(!matchingResult) return <p style={{color: 'white'}}>შედეგების სანახავად ჯერ დაასრულეთ <Link href={'/'} style={{color: "#ab7df4"}} >ტესტი</Link></p>
 
   const onClick = () => {
     setShowModal(true);
