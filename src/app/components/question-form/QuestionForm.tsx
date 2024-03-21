@@ -77,7 +77,7 @@ const QuestionForm = () => {
           <img src={value ? radioGif : gif} alt={question_text} />
           <RadioGroup onChange={handleRadioChange} sx={{ height: 320 }}>
             {question.options.map(({ answer, attributeVal }, index) => (
-              <Box key={index}>
+              <Box key={index} width={{ sm: 500, md: 400, xs: 360 }} p={0}>
                 <FormControlLabel
                   className="formControl"
                   value={attributeVal}
@@ -93,7 +93,7 @@ const QuestionForm = () => {
             ))}
           </RadioGroup>
         </Box>
-        <Box mt={2} mr={2} alignSelf={"end"}>
+        <Box mt={2} mr={{ md: 1, xs: 0, sm: 2 }} alignSelf={"end"}>
           <BtnComponent text="შემდეგი" error={error} />
         </Box>
       </Box>

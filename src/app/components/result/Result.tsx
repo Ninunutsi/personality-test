@@ -54,7 +54,7 @@ const Result: React.FC = () => {
       }
     });
     const random = Math.floor(Math.random() * 10) + 1;
-    
+
     if (equalCounts) {
       setResult(attributes[random]);
     } else {
@@ -68,7 +68,15 @@ const Result: React.FC = () => {
   // ეს სავარაუდოდ ამოსაღები იქნება მაგრამ ცდუნებას ვერ გავუძელი და მაინც გავაკეთეეეეეე
   if (showCountdown && auth && matchingResult) return <Countdown />;
 
-  if(!matchingResult) return <p style={{color: 'white'}}>შედეგების სანახავად ჯერ დაასრულეთ <Link href={'/'} style={{color: "#ab7df4"}} >ტესტი</Link></p>
+  if (!matchingResult)
+    return (
+      <p style={{ color: "white" }}>
+        შედეგების სანახავად ჯერ დაასრულეთ{" "}
+        <Link href={"/"} style={{ color: "#ab7df4" }}>
+          ტესტი
+        </Link>
+      </p>
+    );
 
   const onClick = () => {
     setShowModal(true);
@@ -95,7 +103,7 @@ const Result: React.FC = () => {
                 ...BoxedContent,
               }}
             >
-              <Box width={450} height={400}>
+              <Box maxWidth={450} maxHeight={400}>
                 <img
                   src={matchingResult.gif}
                   alt="gif"

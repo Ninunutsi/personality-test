@@ -38,6 +38,10 @@ export const resultTypographyStyles: SxProps = {
   textAlign: "center",
   letterSpacing: "2px",
   borderRadius: "0.5rem",
+
+  "@media screen and (max-width: 580px)": {
+    borderRadius: 0,
+  },
 };
 
 export const resultTextStyles: SxProps = {
@@ -53,6 +57,10 @@ export const resultBoxStyles: SxProps = {
   gap: "2rem",
   backgroundColor: "white",
   borderRadius: "0.5rem",
+
+  "@media screen and (max-width: 580px)": {
+    borderRadius: 0,
+  },
 };
 
 export const resultLinkContainerStyles: SxProps = {
@@ -82,4 +90,8 @@ export const BoxedContent: SxProps = {
   justifyContent: "center",
   gap: "2rem",
   padding: "0 1.5rem",
+
+  "@media screen and (max-width: 768px)": {
+    flexDirection: "column",
+  },
 };
