@@ -5,6 +5,7 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import BtnComponent from "../button/btn-component";
 import { useValuesContext } from "@/app/context/ValuesContext";
+import Link from "next/link";
 
 const Starter = () => {
   const { setAuth } = useValuesContext();
@@ -25,7 +26,7 @@ const Starter = () => {
         გინდა ისწავლო რაც მართლა გამოგადგება, მაგრამ არ იცი საიდან დაიწყო? მაშინ
       </Typography>
       <Box component="form" onSubmit={handleSubmit}>
-        <BtnComponent text="გააკეთე ტესტი" href="/test" />
+        <Link href={'/test'}><BtnComponent text="გააკეთე ტესტი"/></Link>
       </Box>
     </BoxStyle>
   );
