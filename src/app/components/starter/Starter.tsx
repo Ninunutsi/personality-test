@@ -26,7 +26,7 @@ const Starter = () => {
         გინდა ისწავლო რაც მართლა გამოგადგება, მაგრამ არ იცი საიდან დაიწყო? მაშინ
       </Typography>
       <Box component="form" onSubmit={handleSubmit}>
-        <Link href={'/test'}><BtnComponent text="გააკეთე ტესტი"/></Link>
+        <BtnComponent text="გააკეთე ტესტი" href="/test"/>
       </Box>
     </BoxStyle>
   );
