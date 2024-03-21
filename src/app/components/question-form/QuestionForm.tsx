@@ -15,12 +15,14 @@ import {
 } from "@mui/material";
 
 const QuestionForm = () => {
+  const { attributes, setAttributes, setAuth, auth } = useValuesContext();
   const [data] = useState(QuestionsData);
   const [questionsIndex, setQuestionsIndex] = useState<number>(0);
   const [value, setValue] = useState<string>("");
-  const { attributes, setAttributes, setAuth, auth } = useValuesContext();
   const [error, setError] = useState<boolean>(false);
   const [radioText, setRadioText] = useState<string>("");
+  // დასამატებელია data ში სხვადასხვა გიფები მხოლოდ
+  const [radioGif, setRadioGif] = useState<string>("");
 
   const router = useRouter();
 
@@ -46,7 +48,9 @@ const QuestionForm = () => {
       router.push("/results");
     }
 
+    setValue("");
     setRadioText("");
+    setRadioGif("");
   };
 
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -54,9 +58,11 @@ const QuestionForm = () => {
     const selectedOption = question.options.find(
       (option) => option.attributeVal === event.target.value
     );
-    if (selectedOption) {
-      setRadioText(selectedOption.text);
-    }
+    const selectedGif = question.options.find(
+      (option) => option.attributeVal === event.target.value
+    );
+    selectedOption && setRadioText(selectedOption.text);
+    selectedGif && setRadioGif(selectedGif.radioGif);
   };
 
   useEffect(() => {
@@ -68,7 +74,7 @@ const QuestionForm = () => {
       <TestLabel focused={false}>{question_text}</TestLabel>
       <Box component="form" onSubmit={onFormSubmit} key={question_number}>
         <Box className="radioBoxStyle">
-          <img src={gif} alt={question_text} />
+          <img src={value ? radioGif : gif} alt={question_text} />
           <RadioGroup onChange={handleRadioChange} sx={{ height: 320 }}>
             {question.options.map(({ answer, attributeVal }, index) => (
               <Box key={index}>

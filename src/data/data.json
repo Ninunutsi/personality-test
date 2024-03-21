@@ -8,27 +8,32 @@
         {
           "answer": "ძალიან ორგანიზებული",
           "text": "რამე ტექსტი",
-          "attributeVal": "PM"
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
         },
         {
           "answer": "დეტალებზე ორიენტირებული",
           "text": "რამე ტექსტი2",
-          "attributeVal": "QA"
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
         },
         {
           "answer": "შემოქმედი და გემოვნებიანი",
           "text": "რამე ტექსტი3",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
         {
           "answer": "ლოგიკურად მოაზროვნე",
           "text": "რამე ტექსტი4",
-          "attributeVal": "Backend"
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
         },
         {
           "answer": "მიზანდასახული და მშრომელი",
           "text": "რამე ტექსტი5",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     },
@@ -37,18 +42,35 @@
       "question_text": "„შუა ქალაქის“ რომელი პერსონაჟი იქნებოდი?",
       "gif": "/assets/GIFs/gif2.gif",
       "options": [
-        { "answer": "ირაკლი", "text": "რამე ტექსტი", "attributeVal": "PM" },
-        { "answer": "თამარი", "text": "რამე ტექსტი2", "attributeVal": "QA" },
+        {
+          "answer": "ირაკლი",
+          "text": "რამე ტექსტი",
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
+        },
+        {
+          "answer": "თამარი",
+          "text": "რამე ტექსტი2",
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
+        },
         {
           "answer": "ანაანო",
           "text": "რამე ტექსტი3",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
-        { "answer": "ვახო", "text": "რამე ტექსტი4", "attributeVal": "Backend" },
+        {
+          "answer": "ვახო",
+          "text": "რამე ტექსტი4",
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
+        },
         {
           "answer": "ლაშა",
           "text": "რამე ტექსტი5",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     },
@@ -57,23 +79,36 @@
       "question_text": "რომელ ქვეყანაში იმოგზაურებდი?",
       "gif": "/assets/GIFs/gif3.gif",
       "options": [
-        { "answer": "გერმანია", "text": "რამე ტექსტი", "attributeVal": "PM" },
+        {
+          "answer": "გერმანია",
+          "text": "რამე ტექსტი",
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
+        },
         {
           "answer": "საფრანგეთი",
           "text": "რამე ტექსტი2",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
         },
         {
           "answer": "იაპონია",
           "text": "რამე ტექსტი3",
-          "attributeVal": "Backend"
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
         {
           "answer": "აშშ",
           "text": "რამე ტექსტი4",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
         },
-        { "answer": "შვეიცარია", "text": "რამე ტექსტი5", "attributeVal": "QA" }
+        {
+          "answer": "შვეიცარია",
+          "text": "რამე ტექსტი5",
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
+        }
       ]
     },
     {
@@ -84,20 +119,33 @@
         {
           "answer": "აჯაფსანდალი",
           "text": "რამე ტექსტი",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
         },
-        { "answer": "სუში", "text": "რამე ტექსტი2", "attributeVal": "PM" },
+        {
+          "answer": "სუში",
+          "text": "რამე ტექსტი2",
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
+        },
         {
           "answer": "ბელგიური ვაფლი",
           "text": "რამე ტექსტი3",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
         {
           "answer": "კუბდარი",
           "text": "რამე ტექსტი4",
-          "attributeVal": "Backend"
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
         },
-        { "answer": "ჩაქაფული", "text": "რამე ტექსტი5", "attributeVal": "QA" }
+        {
+          "answer": "ჩაქაფული",
+          "text": "რამე ტექსტი5",
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
+        }
       ]
     },
     {
@@ -105,26 +153,35 @@
       "question_text": "რომელი თამაში გიყვარდა ბავშვობაში ყველაზე მეტად?",
       "gif": "/assets/GIFs/gif5.gif",
       "options": [
-        { "answer": "დაჭერობანა", "text": "რამე ტექსტი", "attributeVal": "QA" },
+        {
+          "answer": "დაჭერობანა",
+          "text": "რამე ტექსტი",
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
+        },
         {
           "answer": "დამალობანა",
           "text": "რამე ტექსტი2",
-          "attributeVal": "Backend"
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
         },
         {
           "answer": "კლასობანა",
           "text": "რამე ტექსტი3",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
         {
           "answer": "წრეში ბურთი",
           "text": "რამე ტექსტი4",
-          "attributeVal": "PM"
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
         },
         {
           "answer": "ამის პატრონმა რა ქნას?",
           "text": "რამე ტექსტი5",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     },
@@ -133,18 +190,35 @@
       "question_text": "რომელია შენი საყვარელი ფერი?",
       "gif": "/assets/GIFs/gif6.gif",
       "options": [
-        { "answer": "შავი", "text": "რამე ტექსტი", "attributeVal": "Backend" },
-        { "answer": "წითელი", "text": "რამე ტექსტი2", "attributeVal": "PM" },
+        {
+          "answer": "შავი",
+          "text": "რამე ტექსტი",
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
+        },
+        {
+          "answer": "წითელი",
+          "text": "რამე ტექსტი2",
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
+        },
         {
           "answer": "თეთრი",
           "text": "რამე ტექსტი3",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
-        { "answer": "ყვითელი", "text": "რამე ტექსტი4", "attributeVal": "QA" },
+        {
+          "answer": "ყვითელი",
+          "text": "რამე ტექსტი4",
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
+        },
         {
           "answer": "ყველა ზემოთ ჩამოთვლილი და არამხოლოდ",
           "text": "რამე ტექსტი5",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     },
@@ -153,22 +227,35 @@
       "question_text": "შენი აზრით, რომელია ყველაზე სანახაობრივი ქართული ცეკვა?",
       "gif": "/assets/GIFs/gif7.gif",
       "options": [
-        { "answer": "ხორუმი", "text": "რამე ტექსტი", "attributeVal": "PM" },
+        {
+          "answer": "ხორუმი",
+          "text": "რამე ტექსტი",
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
+        },
         {
           "answer": "ქართული",
           "text": "რამე ტექსტი2",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
         },
         {
           "answer": "სამაია",
           "text": "რამე ტექსტი3",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
-        { "answer": "აჭარული", "text": "რამე ტექსტი4", "attributeVal": "QA" },
+        {
+          "answer": "აჭარული",
+          "text": "რამე ტექსტი4",
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
+        },
         {
           "answer": "მთიულური",
           "text": "რამე ტექსტი5",
-          "attributeVal": "Backend"
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     },
@@ -177,22 +264,35 @@
       "question_text": "ჰარი პოტერის რომელი პერსონაჟის თვისებებია შენთან ყველაზე ახლოს?",
       "gif": "/assets/GIFs/gif8.gif",
       "options": [
-        { "answer": "ჰარი", "text": "რამე ტექსტი", "attributeVal": "Backend" },
-        { "answer": "ჰერმიონი", "text": "რამე ტექსტი", "attributeVal": "PM" },
+        {
+          "answer": "ჰარი",
+          "text": "რამე ტექსტი",
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
+        },
+        {
+          "answer": "ჰერმიონი",
+          "text": "რამე ტექსტი",
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
+        },
         {
           "answer": "რონი",
           "text": "რამე ტექსტი",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
         {
           "answer": "პროფესორი სნეიპი",
           "text": "რამე ტექსტი",
-          "attributeVal": "QA"
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
         },
         {
           "answer": "პროფესორი მინერვა მაკგონაგალი",
           "text": "რამე ტექსტი",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     },
@@ -204,27 +304,32 @@
         {
           "answer": "ფილმს ვუყურებ",
           "text": "რამე ტექსტი",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
         },
         {
           "answer": "კომპიუტერულ თამაშებს ვთამაშობ",
           "text": "რამე ტექსტი",
-          "attributeVal": "Backend"
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
         },
         {
           "answer": "მეგობრებთან ერთად გართობას ვგეგმავ",
           "text": "რამე ტექსტი",
-          "attributeVal": "PM"
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
         {
           "answer": "ვხატავ, მუსიკას ვუსმენ ან კულტურულ ღონისძიებებს ვესწრები",
           "text": "რამე ტექსტი",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
         },
         {
           "answer": "უცხო ადგილებში ვსეირნობ",
           "text": "რამე ტექსტი",
-          "attributeVal": "QA"
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     },
@@ -236,27 +341,32 @@
         {
           "answer": "ოფისში ხალხმრავალ გარემოში",
           "text": "რამე ტექსტი",
-          "attributeVal": "PM"
+          "attributeVal": "PM",
+          "radioGif": "/assets/GIFs/q1gif1.gif"
         },
         {
           "answer": "სახლიდან დისტანციურად",
           "text": "რამე ტექსტი",
-          "attributeVal": "Backend"
+          "attributeVal": "Backend",
+          "radioGif": "/assets/GIFs/q1gif2.gif"
         },
         {
           "answer": "ფრილანსერად, მოქნილი გრაფიკით",
           "text": "რამე ტექსტი",
-          "attributeVal": "UI/UX&Graphic Design"
+          "attributeVal": "UI/UX&Graphic Design",
+          "radioGif": "/assets/GIFs/q1gif3.gif"
         },
         {
           "answer": "დისტანციურად მირჩევნია, მარა ოფისშიც არაუშავს",
           "text": "რამე ტექსტი",
-          "attributeVal": "Frontend/ნებისმიერი"
+          "attributeVal": "Frontend/ნებისმიერი",
+          "radioGif": "/assets/GIFs/q1gif4.gif"
         },
         {
           "answer": "როგორც საქმე მოითხოვს, მთავარია შედეგი",
           "text": "რამე ტექსტი",
-          "attributeVal": "QA"
+          "attributeVal": "QA",
+          "radioGif": "/assets/GIFs/q1gif5.gif"
         }
       ]
     }

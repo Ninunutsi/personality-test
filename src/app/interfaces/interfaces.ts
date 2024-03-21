@@ -4,6 +4,7 @@ export interface IOptions {
   answer: string;
   attribute: string;
   text: string;
+  radioGif: string;
 }
 
 export interface QuestionProps {
