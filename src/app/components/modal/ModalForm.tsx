@@ -6,7 +6,7 @@ import { ModalFormBox, Overlay } from "./ModalFormStyle";
 import BtnComponent from "../button/btn-component";
 import CloseIcon from "@mui/icons-material/Close";
 
-const ModalForm: React.FC = () => {
+const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const userNameRef = useRef<HTMLInputElement | null>(null);
@@ -33,7 +33,9 @@ const ModalForm: React.FC = () => {
           <Typography mb={2} variant="h5">
             გამოგვიგზავნე მონაცემები
           </Typography>
-          <CloseIcon />
+          <Box onClick={onClose}>
+            <CloseIcon />
+          </Box>
         </Box>
         <TextField
           className="inputField"
@@ -53,11 +55,11 @@ const ModalForm: React.FC = () => {
           placeholder="იუზერნეიმი"
           inputRef={userNameRef}
         />
-        <Box alignSelf={"start"} mt={1}>
+        <Box alignSelf={"start"} mt={4}>
           <BtnComponent text="გაგზავნა" />
         </Box>
       </ModalFormBox>
-      <Overlay></Overlay>
+      <Overlay onClick={onClose}></Overlay>
     </Box>
   );
 };

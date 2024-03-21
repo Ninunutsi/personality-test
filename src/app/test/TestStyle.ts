@@ -21,8 +21,7 @@ export const TestBoxCard = styled(Box)({
 
   form: {
     display: "flex",
-    flexDirection: "column"
-
+    flexDirection: "column",
   },
 
   ".radioBoxStyle": {
@@ -45,8 +44,6 @@ export const TestBoxCard = styled(Box)({
       borderRadius: 10,
     },
   },
-
-  
 });
 
 export const TestLabel = styled(FormLabel)({

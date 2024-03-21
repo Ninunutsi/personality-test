@@ -1,8 +1,11 @@
 "use client";
 
 import React, { ChangeEvent, useState, FormEvent, useEffect } from "react";
-
 import QuestionsData from "../../../data/data.json";
+import BtnComponent from "../button/btn-component";
+import { TestBoxCard, TestLabel } from "@/app/test/TestStyle";
+import { useRouter } from "next/navigation";
+import { useValuesContext } from "@/app/context/ValuesContext";
 import {
   Box,
   FormControlLabel,
@@ -10,10 +13,6 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
-import { TestBoxCard, TestLabel } from "@/app/test/TestStyle";
-import BtnComponent from "../button/btn-component";
-import { useRouter } from "next/navigation";
-import { useValuesContext } from "@/app/context/ValuesContext";
 
 const QuestionForm = () => {
   const [data] = useState(QuestionsData);
@@ -72,10 +71,9 @@ const QuestionForm = () => {
           <img src={gif} alt={question_text} />
           <RadioGroup onChange={handleRadioChange} sx={{ height: 320 }}>
             {question.options.map(({ answer, attributeVal }, index) => (
-              <Box>
+              <Box key={index}>
                 <FormControlLabel
                   className="formControl"
-                  key={index}
                   value={attributeVal}
                   control={<Radio />}
                   label={answer}

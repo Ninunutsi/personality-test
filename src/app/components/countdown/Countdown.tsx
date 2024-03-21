@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Typography } from '@mui/material';
+import React, { useState, useEffect } from "react";
+import { Box, Typography } from "@mui/material";
+import { CountDownBox } from "./CountdownStyle";
 
 const Countdown: React.FC = () => {
   const [timer, setTimer] = useState(3);
@@ -17,16 +18,17 @@ const Countdown: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-
   return (
-    <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+    <CountDownBox>
+      <Box>
         <Typography variant="h1" color={"#ab7df4"} fontSize={"8rem"}>
           {timer}
         </Typography>
-        <Typography variant="subtitle1" color={"white"} fontSize={"2rem"}>Get ready...</Typography>
+        <Typography variant="subtitle1" color={"white"} fontSize={"2rem"}>
+          Get ready...
+        </Typography>
       </Box>
-    </Box>
+    </CountDownBox>
   );
 };
 
