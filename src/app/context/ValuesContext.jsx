@@ -6,7 +6,8 @@ const ValContext = createContext();
 
 export const ValuesProvider = ({ children }) => {
   const [attributes, setAttributes] = useState([]);
-  const [auth, setAuth] = useState(false);
+  // false გადაკეთების დროს 
+  const [auth, setAuth] = useState(true);
 
   return (
     <ValContext.Provider value={{ attributes, setAttributes, setAuth, auth }}>
