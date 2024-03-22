@@ -28,9 +28,15 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <Box>
-      <ModalFormBox width={500} p={5} component="form" onSubmit={handleSubmit}>
-        <Box alignSelf={"start"}>
-          <Typography mb={2} variant="h5">
+      <ModalFormBox
+        width={{ md: 500, sm: 400, xs: "100%" }}
+        height={{ md: "auto", sm: "auto", xs: "100%" }}
+        p={{ md: 5, sm: 4, xs: 2 }}
+        component="form"
+        onSubmit={handleSubmit}
+      >
+        <Box alignSelf={"start"} className="title">
+          <Typography mb={2} variant="h6">
             გამოგვიგზავნე მონაცემები
           </Typography>
           <Box onClick={onClose}>
@@ -48,6 +54,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           label="მეილი"
           placeholder="მეილი"
           inputRef={emailRef}
+          type="email"
         />
         <TextField
           className="inputField"
