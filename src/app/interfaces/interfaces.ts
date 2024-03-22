@@ -2,8 +2,8 @@
 
 export interface IOptions {
   answer: string;
-  attribute: string;
   text: string;
+  attributeVal: string;
   radioGif: string;
 }
 
@@ -14,8 +14,11 @@ export interface QuestionProps {
   options: IOptions[];
 }
 
-export interface QuestionFormProps {
-  question: QuestionProps;
+// Context interface
+
+export interface ValuesContextType {
+  attributes: string[];
+  setAttributes: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 // Button interface
@@ -23,7 +26,6 @@ export interface QuestionFormProps {
 export interface IBtn {
   text: string;
   href?: string | undefined;
-  onClick?: () => void;
   error?: boolean;
 }
 

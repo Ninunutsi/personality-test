@@ -1,7 +1,6 @@
 "use client";
 
 import { useValuesContext } from "@/app/context/ValuesContext";
-import { useRouter } from "next/navigation";
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import resultsData from "../../../data/results.json";
@@ -17,12 +16,15 @@ import {
   BoxContainerStyles,
   BoxedContent,
 } from "./resultStyles";
+import { useRouter } from "next/navigation";
 
 const Result: React.FC = () => {
-  const { attributes, auth } = useValuesContext();
-  const [result, setResult] = useState<string>("'");
-  const [showCountdown, setShowCountdown] = useState<boolean>(true);
+  const { attributes } = useValuesContext();
+  const [result, setResult] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [showCountdown, setShowCountdown] = useState<boolean>(true);
+  const [wait, setWait] = useState<boolean>(false);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -30,12 +32,6 @@ const Result: React.FC = () => {
       setShowCountdown(false);
     }, 3000);
   }, []);
-
-  useEffect(() => {
-    if (!auth) {
-      router.push("/");
-    }
-  }, [auth]);
 
   useEffect(() => {
     let counts: { [key: string]: number } = {};
@@ -54,7 +50,7 @@ const Result: React.FC = () => {
       }
     });
     const random = Math.floor(Math.random() * 10) + 1;
-    
+
     if (equalCounts) {
       setResult(attributes[random]);
     } else {
@@ -65,10 +61,12 @@ const Result: React.FC = () => {
   const matchingResult = resultsData.results.find(
     (item) => item.title === result
   );
-  // ეს სავარაუდოდ ამოსაღები იქნება მაგრამ ცდუნებას ვერ გავუძელი და მაინც გავაკეთეეეეეე
-  if (showCountdown && auth && matchingResult) return <Countdown />;
 
-  if(!matchingResult) return <p style={{color: 'white'}}>შედეგების სანახავად ჯერ დაასრულეთ <Link href={'/'} style={{color: "#ab7df4"}} >ტესტი</Link></p>
+  useEffect(() => {
+    if (!matchingResult) {
+      return setWait(true);
+    }
+  }, [matchingResult]);
 
   const onClick = () => {
     setShowModal(true);
@@ -77,6 +75,29 @@ const Result: React.FC = () => {
   const onClose = () => {
     setShowModal(false);
   };
+
+  // ეს სავარაუდოდ ამოსაღები იქნება მაგრამ ცდუნებას ვერ გავუძელი და მაინც გავაკეთეეეეეე
+  if (showCountdown && matchingResult) return <Countdown />;
+
+  if (wait && !matchingResult) {
+    return (
+      <Box
+        position={"absolute"}
+        top={"50%"}
+        left={"50%"}
+        sx={{ transform: "translate(-50%, -50%)" }}
+      >
+        <Typography variant="h5" style={{ color: "white" }}>
+          შედეგების სანახავად ჯერ დაასრულეთ
+          <Link href={"/"} style={{ color: "#ab7df4", marginLeft: 5 }}>
+            ტესტი
+          </Link>
+        </Typography>
+      </Box>
+    );
+  }
+
+  console.log("dzudzu");
 
   return (
     <Box>
@@ -95,7 +116,7 @@ const Result: React.FC = () => {
                 ...BoxedContent,
               }}
             >
-              <Box width={450} height={400}>
+              <Box maxWidth={450} height={{ md: 400, sm: 300, xs: 200 }}>
                 <img
                   src={matchingResult.gif}
                   alt="gif"

@@ -19,6 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ValuesProvider>
+        <head>
+          <meta name="robots" content="index" />
+        </head>
         <body className={inter.className}>
           <BgBox>{children}</BgBox>
         </body>

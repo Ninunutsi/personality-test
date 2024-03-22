@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ChangeEvent, useState, FormEvent, useEffect } from "react";
+import React, { ChangeEvent, useState, FormEvent } from "react";
 import QuestionsData from "../../../data/data.json";
 import BtnComponent from "../button/btn-component";
 import { TestBoxCard, TestLabel } from "@/app/test/TestStyle";
@@ -13,21 +13,33 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
+import { QuestionProps } from "@/app/interfaces/interfaces";
 
 const QuestionForm = () => {
-  const { attributes, setAttributes, setAuth, auth } = useValuesContext();
+  const { attributes, setAttributes } = useValuesContext();
   const [data] = useState(QuestionsData);
   const [questionsIndex, setQuestionsIndex] = useState<number>(0);
   const [value, setValue] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
   const [radioText, setRadioText] = useState<string>("");
-  // დასამატებელია data ში სხვადასხვა გიფები მხოლოდ
   const [radioGif, setRadioGif] = useState<string>("");
 
   const router = useRouter();
 
-  const questions = data.questions;
-  const question = questions[questionsIndex];
+  interface rame {
+    question_number: number;
+    question_text: string;
+    gif: string;
+    options: {
+      answer: string;
+      text: string;
+      attributeVal: string;
+      radioGif: string;
+    }[];
+  }
+
+  const questions: QuestionProps[] = data.questions;
+  const question: QuestionProps = questions[questionsIndex];
   const { question_text, question_number, gif } = question;
 
   const onFormSubmit = (e: FormEvent): void => {
@@ -38,14 +50,12 @@ const QuestionForm = () => {
       return;
     }
 
-    setError(false);
-    setQuestionsIndex((prev) => prev + 1);
-    setAttributes([...attributes, value]);
-
     if (questionsIndex >= questions.length - 1) {
-      setQuestionsIndex((prev) => prev - 1);
-      setAuth(true);
       router.push("/results");
+    } else {
+      setError(false);
+      setQuestionsIndex((prev) => prev + 1);
+      setAttributes([...attributes, value]);
     }
 
     setValue("");
@@ -65,9 +75,9 @@ const QuestionForm = () => {
     selectedGif && setRadioGif(selectedGif.radioGif);
   };
 
-  useEffect(() => {
-    !auth && router.push("/");
-  }, [auth]);
+  // window.onload = () => {
+  //   router.push("/");
+  // };
 
   return (
     <TestBoxCard>
@@ -77,7 +87,7 @@ const QuestionForm = () => {
           <img src={value ? radioGif : gif} alt={question_text} />
           <RadioGroup onChange={handleRadioChange} sx={{ height: 320 }}>
             {question.options.map(({ answer, attributeVal }, index) => (
-              <Box key={index}>
+              <Box key={index} width={{ sm: 500, md: 400, xs: 360 }} p={0}>
                 <FormControlLabel
                   className="formControl"
                   value={attributeVal}
@@ -93,7 +103,7 @@ const QuestionForm = () => {
             ))}
           </RadioGroup>
         </Box>
-        <Box mt={2} mr={2} alignSelf={"end"}>
+        <Box mt={2} mr={{ md: 1, xs: 0, sm: 2 }} alignSelf={"end"}>
           <BtnComponent text="შემდეგი" error={error} />
         </Box>
       </Box>
