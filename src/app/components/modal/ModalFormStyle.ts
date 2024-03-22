@@ -16,17 +16,24 @@ export const ModalFormBox = styled(Box)({
   borderRadius: 20,
 
   transform: "translate(-50%, -50%)",
+
   ".inputField": { margin: 5, width: "100%", maxHeight: 45 },
 
-  svg: {
-    position: "absolute",
-    top: 48,
-    right: 45,
-    cursor: "pointer",
+  ".title": {
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
 
-    "&:hover": {
-      color: "red",
+    svg: {
+      fontSize: 20,
+      marginBottom: 2,
+      cursor: "pointer",
     },
+  },
+
+  "@media (max-width: 600px)": {
+    borderRadius: 0,
   },
 });
 
