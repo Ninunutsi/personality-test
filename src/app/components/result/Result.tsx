@@ -2,12 +2,14 @@
 
 import { useValuesContext } from "@/app/context/ValuesContext";
 import { Box, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import resultsData from "../../../data/results.json";
 import BtnComponent from "../button/btn-component";
 import Link from "next/link";
 import Countdown from "../countdown";
 import ModalForm from "../modal/ModalForm";
+import UnmutchingRes from "../unmatchingres/UnmutchingRes";
 import {
   resultTypographyStyles,
   resultTextStyles,
@@ -16,7 +18,6 @@ import {
   BoxContainerStyles,
   BoxedContent,
 } from "./resultStyles";
-import { useRouter } from "next/navigation";
 
 const Result: React.FC = () => {
   const { attributes } = useValuesContext();
@@ -76,28 +77,11 @@ const Result: React.FC = () => {
     setShowModal(false);
   };
 
-  // ეს სავარაუდოდ ამოსაღები იქნება მაგრამ ცდუნებას ვერ გავუძელი და მაინც გავაკეთეეეეეე
   if (showCountdown && matchingResult) return <Countdown />;
 
   if (wait && !matchingResult) {
-    return (
-      <Box
-        position={"absolute"}
-        top={"50%"}
-        left={"50%"}
-        sx={{ transform: "translate(-50%, -50%)" }}
-      >
-        <Typography variant="h5" style={{ color: "white" }}>
-          შედეგების სანახავად ჯერ დაასრულეთ
-          <Link href={"/"} style={{ color: "#ab7df4", marginLeft: 5 }}>
-            ტესტი
-          </Link>
-        </Typography>
-      </Box>
-    );
+    return <UnmutchingRes />;
   }
-
-  console.log("dzudzu");
 
   return (
     <Box>
