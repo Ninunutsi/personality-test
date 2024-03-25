@@ -26,7 +26,7 @@ export interface ValuesContextType {
 export interface IBtn {
   text: string;
   href?: string | undefined;
-  error?: boolean;
+  checked?: boolean;
 }
 
 // useRequest Interface

@@ -1,91 +1,67 @@
 "use client";
 
-import { FormLabel } from "@mui/material";
-import { Box, styled } from "@mui/system";
+import { FormLabel, SxProps } from "@mui/material";
+import { styled } from "@mui/system";
 
-export const BoxTestStyle = styled(Box)({
-  backgroundImage: `url("/assets/cardBg.png")`,
-  backgroundPosition: "left",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
+// export const TestLabel = styled(FormLabel)({
+//   alignSelf: "center",
+//   textAlign: "center",
+//   maxWidth: 700,
+//   height: 30,
+//   fontSize: 40,
+//   fontWeight: 700,
+//   color: "#000",
+//   marginBottom: 140,
+// });
 
-  alignSelf: "Center",
-  padding: 40,
-  borderRadius: 40,
-
-  "@media (max-width: 920px)": {
-    margin: "0 40px",
-    maxWidth: 700,
-    width: "100%",
-    backgroundImage: "none",
-    backgroundColor: "white",
-  },
-
-  "@media (max-width: 600px)": {
-    width: "100%",
-    margin: 0,
-    borderRadius: 0,
-  },
-});
-
-export const TestBoxCard = styled(Box)({
+export const TestBox: SxProps = {
+  padding: "48px 64px 64px",
+  width: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  alignItems: "center",
+
+  color: "#000",
+
+  h2: {
+    fontSize: 40,
+    fontWeight: 700,
+    color: "#000",
+    marginBottom: 10,
+    maxWidth: 750,
+    textAlign: "center",
+  },
 
   form: {
-    display: "flex",
-    flexDirection: "column",
+    width: "100%",
+    alignSelf: "center",
   },
+};
 
-  ".radioBoxStyle": {
-    display: "flex",
-    alignItems: "start",
-    justifyContent: "space-between",
-    gap: 30,
-
-    img: {
-      width: 400,
-      height: 280,
-      borderRadius: 10,
-    },
-
-    ".formControl": {
-      width: "100%",
-      height: 52,
-      border: "2px solid black",
-      margin: "0 0 5px",
-      borderRadius: 10,
-    },
-
-    "@media (max-width: 920px)": {
-      flexDirection: "column",
-      alignItems: "center",
-
-      img: {
-        width: "100%",
-      },
-    },
-
-    "@media (max-width: 600px)": {
-      img: {
-        height: 200,
-      },
-    },
-  },
-});
-
-export const TestLabel = styled(FormLabel)({
+export const RadioContent: SxProps = {
+  maxWidth: 537,
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "start",
   alignSelf: "center",
-  textAlign: "center",
-  maxWidth: 500,
-  height: 30,
-  fontSize: 22,
-  fontWeight: 700,
-  color: "#000",
-  marginBottom: 60,
+  padding: "10px 20px ",
 
-  "@media (max-width: 600px)": {
-    fontSize: 18,
+  border: "1px solid #F5F5F5",
+  backgroundColor: "#ebe9e9",
+
+  label: {
+    width: "100%",
   },
-});
+};
+
+export const RadioInsideContent: SxProps = {
+  width: "100%",
+
+  img: {
+    width: "100%",
+    height: 330,
+  },
+};

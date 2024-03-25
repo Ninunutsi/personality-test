@@ -1,8 +1,10 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { ValuesProvider } from "./context/ValuesContext";
 import { Inter } from "next/font/google";
 import { BgBox } from "./mainpage/HomePageStyle";
+import { Metadata } from "next/types";
+import Header from "./components/header";
+import { Box } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +25,10 @@ export default function RootLayout({
           <meta name="robots" content="index" />
         </head>
         <body className={inter.className}>
-          <BgBox>{children}</BgBox>
+          <Header />
+          <BgBox pt={4}>
+            <Box className={"container"}>{children}</Box>
+          </BgBox>
         </body>
       </ValuesProvider>
     </html>

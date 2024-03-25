@@ -8,6 +8,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const nameRef = useRef<HTMLInputElement | null>(null);
+  const lastName = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const userNameRef = useRef<HTMLInputElement | null>(null);
 
@@ -15,6 +16,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     e.preventDefault();
     const UserInfo = {
       name: nameRef.current?.value || "",
+      lastName: lastName.current?.value || "",
       email: emailRef.current?.value || "",
       userName: userNameRef.current?.value || "",
     };
@@ -22,6 +24,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     console.log(UserInfo);
 
     nameRef.current!.value = "";
+    lastName.current!.value = "";
     emailRef.current!.value = "";
     userNameRef.current!.value = "";
   };
@@ -35,20 +38,28 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         component="form"
         onSubmit={handleSubmit}
       >
-        <Box alignSelf={"start"} className="title">
-          <Typography mb={2} variant="h6">
-            გამოგვიგზავნე მონაცემები
+        <Box className="title">
+          <Typography mb={3} variant="h5">
+            პერსონალური მონაცემები
           </Typography>
-          <Box onClick={onClose}>
-            <CloseIcon />
-          </Box>
+          <Typography mb={2} variant="h6">
+            შეიყვანეთ თქვენი მონაცემები
+          </Typography>
         </Box>
-        <TextField
-          className="inputField"
-          label="სახელი"
-          placeholder="სახელი"
-          inputRef={nameRef}
-        />
+        <Box className="namesInput">
+          <TextField
+            className="inputField"
+            label="სახელი"
+            placeholder="სახელი"
+            inputRef={nameRef}
+          />
+          <TextField
+            className="inputField"
+            label="გვარი"
+            placeholder="გვარი"
+            inputRef={lastName}
+          />
+        </Box>
         <TextField
           className="inputField"
           label="მეილი"
@@ -62,8 +73,8 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           placeholder="იუზერნეიმი"
           inputRef={userNameRef}
         />
-        <Box alignSelf={"start"} mt={4}>
-          <BtnComponent text="გაგზავნა" />
+        <Box width={"100%"} mt={4} sx={{ button: { width: "100%" } }}>
+          <BtnComponent text="გაგზავნა" checked={true} />
         </Box>
       </ModalFormBox>
       <Overlay onClick={onClose}></Overlay>
