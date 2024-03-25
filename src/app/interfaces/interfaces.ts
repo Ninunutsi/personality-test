@@ -10,7 +10,6 @@ export interface IOptions {
 export interface QuestionProps {
   question_number: number;
   question_text: string;
-  gif: string;
   options: IOptions[];
 }
 

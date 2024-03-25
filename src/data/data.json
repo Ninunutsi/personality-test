@@ -3,7 +3,6 @@
     {
       "question_number": 1,
       "question_text": "როგორ დაახასიათებდი საკუთარ თავს ორი სიტყვით?",
-      "gif": "/assets/GIFs/gif1.gif",
       "options": [
         {
           "answer": "ძალიან ორგანიზებული",
@@ -40,7 +39,6 @@
     {
       "question_number": 2,
       "question_text": "„შუა ქალაქის“ რომელი პერსონაჟი იქნებოდი?",
-      "gif": "/assets/GIFs/gif2.gif",
       "options": [
         {
           "answer": "ირაკლი",
@@ -77,7 +75,6 @@
     {
       "question_number": 3,
       "question_text": "რომელ ქვეყანაში იმოგზაურებდი?",
-      "gif": "/assets/GIFs/gif3.gif",
       "options": [
         {
           "answer": "გერმანია",
@@ -114,7 +111,6 @@
     {
       "question_number": 4,
       "question_text": "რომელია შენი საყვარელი კერძი?",
-      "gif": "/assets/GIFs/gif4.gif",
       "options": [
         {
           "answer": "აჯაფსანდალი",
@@ -151,7 +147,6 @@
     {
       "question_number": 5,
       "question_text": "რომელი თამაში გიყვარდა ბავშვობაში ყველაზე მეტად?",
-      "gif": "/assets/GIFs/gif5.gif",
       "options": [
         {
           "answer": "დაჭერობანა",
@@ -188,7 +183,6 @@
     {
       "question_number": 6,
       "question_text": "რომელია შენი საყვარელი ფერი?",
-      "gif": "/assets/GIFs/gif6.gif",
       "options": [
         {
           "answer": "შავი",
@@ -225,7 +219,6 @@
     {
       "question_number": 7,
       "question_text": "შენი აზრით, რომელია ყველაზე სანახაობრივი ქართული ცეკვა?",
-      "gif": "/assets/GIFs/gif7.gif",
       "options": [
         {
           "answer": "ხორუმი",
@@ -262,7 +255,6 @@
     {
       "question_number": 8,
       "question_text": "ჰარი პოტერის რომელი პერსონაჟის თვისებებია შენთან ყველაზე ახლოს?",
-      "gif": "/assets/GIFs/gif8.gif",
       "options": [
         {
           "answer": "ჰარი",
@@ -299,7 +291,6 @@
     {
       "question_number": 9,
       "question_text": "როგორ ატარებ თავისუფალ დროს?",
-      "gif": "/assets/GIFs/gif9.gif",
       "options": [
         {
           "answer": "ფილმს ვუყურებ",
@@ -336,7 +327,6 @@
     {
       "question_number": 10,
       "question_text": "საიდან და როგორ გირჩევნია მუშაობა?",
-      "gif": "/assets/GIFs/gif10.gif",
       "options": [
         {
           "answer": "ოფისში ხალხმრავალ გარემოში",

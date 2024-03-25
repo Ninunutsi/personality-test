@@ -1,18 +1,6 @@
 "use client";
 
-import { FormLabel, SxProps } from "@mui/material";
-import { styled } from "@mui/system";
-
-// export const TestLabel = styled(FormLabel)({
-//   alignSelf: "center",
-//   textAlign: "center",
-//   maxWidth: 700,
-//   height: 30,
-//   fontSize: 40,
-//   fontWeight: 700,
-//   color: "#000",
-//   marginBottom: 140,
-// });
+import { SxProps } from "@mui/material";
 
 export const TestBox: SxProps = {
   padding: "48px 64px 64px",
@@ -47,7 +35,8 @@ export const RadioContent: SxProps = {
   justifyContent: "center",
   alignItems: "start",
   alignSelf: "center",
-  padding: "10px 20px ",
+  padding: "10px 20px",
+  borderRadius: 3,
 
   border: "1px solid #F5F5F5",
   backgroundColor: "#ebe9e9",
@@ -61,6 +50,7 @@ export const RadioInsideContent: SxProps = {
   width: "100%",
 
   img: {
+    borderRadius: 2,
     width: "100%",
     height: 330,
   },

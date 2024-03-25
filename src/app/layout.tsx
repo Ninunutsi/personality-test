@@ -5,6 +5,7 @@ import { BgBox } from "./mainpage/HomePageStyle";
 import { Metadata } from "next/types";
 import Header from "./components/header";
 import { Box } from "@mui/material";
+import Background from "./components/background/Background";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,8 @@ export default function RootLayout({
         </head>
         <body className={inter.className}>
           <Header />
-          <BgBox pt={4}>
+          <Background />
+          <BgBox pt={4} pb={4}>
             <Box className={"container"}>{children}</Box>
           </BgBox>
         </body>
