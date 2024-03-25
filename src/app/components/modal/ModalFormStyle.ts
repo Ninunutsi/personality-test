@@ -18,12 +18,12 @@ export const ModalFormBox = styled(Box)({
   transform: "translate(-50%, -50%)",
 
   ".namesInput": {
-    width: "100%",
     display: "flex",
     gap: 12,
 
     ".inputField": {
       margin: 0,
+      width: "50%",
     },
   },
 
