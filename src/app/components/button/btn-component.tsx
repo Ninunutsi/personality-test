@@ -6,7 +6,7 @@ import { IBtn } from "@/app/interfaces/interfaces";
 import { useRouter } from "next/navigation";
 import { Box } from "@mui/material";
 
-const BtnComponent: React.FC<IBtn> = ({ text, href, error }) => {
+const BtnComponent: React.FC<IBtn> = ({ text, href, checked }) => {
   const router = useRouter();
 
   const startQuiz = () => {
@@ -19,13 +19,13 @@ const BtnComponent: React.FC<IBtn> = ({ text, href, error }) => {
         variant="contained"
         type="submit"
         sx={{
-          bgcolor: error ? "red" : "",
+          opacity: !checked ? "0.2" : "1",
           "&:hover": {
-            bgcolor: error ? "red" : "",
+            opacity: !checked ? "0.2" : "1",
           },
         }}
       >
-        {error ? "მონიშნეთ პასუხი" : text}
+        {text}
       </ButtonStyle>
     </Box>
   );

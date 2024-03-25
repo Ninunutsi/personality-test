@@ -1,12 +1,12 @@
 import React from "react";
-import { BoxTestStyle } from "./TestStyle";
 import QuestionForm from "../components/question-form";
+import { Box } from "@mui/material";
 
 const Test = () => {
   return (
-    <BoxTestStyle>
+    <Box>
       <QuestionForm />
-    </BoxTestStyle>
+    </Box>
   );
 };
 

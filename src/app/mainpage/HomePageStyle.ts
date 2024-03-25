@@ -3,13 +3,13 @@
 import { Box, Button, styled } from "@mui/material";
 
 export const BoxStyle = styled(Box)({
-  minHeight: "100vh",
   display: "flex",
-  alignItems: "center",
+  alignItems: "start",
   justifyContent: "center",
   flexDirection: "column",
-  textAlign: "center",
   color: "white",
+  border: "3px solid black",
+  borderRadius: 6,
 
   h5: {
     lineHeight: "2rem",
@@ -20,7 +20,8 @@ export const BoxStyle = styled(Box)({
 
 export const ButtonStyle = styled(Button)({
   backgroundColor: "#ab7df4",
-  fontSize: "1rem",
+  fontSize: "1.25rem",
+  padding: "20px 79px",
 
   "&:hover": {
     backgroundColor: "#ab7df4",
@@ -28,12 +29,11 @@ export const ButtonStyle = styled(Button)({
 });
 
 export const BgBox = styled(Box)({
+  margin: "0 auto",
   minHeight: "100vh",
-  display: "flex",
-  justifyContent: "center",
-  alignContent: "center",
-  backgroundImage: `url("assets/mainBG.svg")`,
+  backgroundColor: "#F8F8F8",
+  backgroundImage: `url("assets/skillwillBg.svg")`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  backgroundSize: "cover",
+  backgroundPosition: "left",
+  backgroundSize: "contain",
 });
