@@ -29,11 +29,17 @@ export const ButtonStyle = styled(Button)({
 });
 
 export const BgBox = styled(Box)({
+  position: "relative",
+  zIndex: 1,
   margin: "0 auto",
   minHeight: "100vh",
-  backgroundColor: "#F8F8F8",
-  backgroundImage: `url("assets/skillwillBg.svg")`,
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "left",
-  backgroundSize: "contain",
+});
+
+export const BgImage = styled(Box)({
+  position: "absolute",
+  top: 40,
+  left: 0,
+  zIndex: 0,
+  width: "100%",
+  height: "100%",
 });

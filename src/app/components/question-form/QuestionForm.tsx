@@ -35,7 +35,7 @@ const QuestionForm = () => {
 
   const questions: QuestionProps[] = data.questions;
   const question: QuestionProps = questions[questionsIndex];
-  const { question_text, question_number, gif } = question;
+  const { question_text, question_number } = question;
 
   useEffect(() => {
     value === "" ? setChecked(false) : setChecked(true);
@@ -71,10 +71,6 @@ const QuestionForm = () => {
     selectedGif && setRadioGif(selectedGif.radioGif);
   };
 
-  // window.onload = () => {
-  //   router.push("/");
-  // };
-
   return (
     <BoxStyle>
       <QuizHeader value={questIndex} />
@@ -91,7 +87,6 @@ const QuestionForm = () => {
                   control={<Radio />}
                   label={answer}
                 />
-
                 {value === attributeVal && (
                   <Box sx={{ ...RadioInsideContent }}>
                     <img src={radioGif} alt={question_text} />

@@ -8,6 +8,7 @@ export const HeaderStyles: SxProps = {
   padding: "35px 0",
   backgroundColor: "white",
   boxShadow: "0px 1px 6px #0000001A",
+  zIndex: 100,
 };
 
 export const HeaderContainer: SxProps = {

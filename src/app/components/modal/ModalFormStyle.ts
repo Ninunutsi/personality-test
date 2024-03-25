@@ -1,13 +1,16 @@
 "use client";
 
-import { Box, styled } from "@mui/material";
+import { Box, SxProps, styled } from "@mui/material";
 
-export const ModalFormBox = styled(Box)({
+export const FixedPos: SxProps = {
   position: "fixed",
   top: "50%",
   left: "50%",
+  transform: "translate(-50%, -50%)",
   zIndex: 6,
+};
 
+export const ModalFormBox = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -15,15 +18,19 @@ export const ModalFormBox = styled(Box)({
   backgroundColor: "white",
   borderRadius: 10,
 
-  transform: "translate(-50%, -50%)",
-
   ".namesInput": {
+    width: "100%",
     display: "flex",
     gap: 12,
 
+    "@media (max-width: 768px)": {
+      flexDirection: "column",
+      gap: 26,
+    },
+
     ".inputField": {
       margin: 0,
-      width: "50%",
+      width: "100%",
     },
   },
 
@@ -51,4 +58,15 @@ export const Overlay = styled(Box)({
   right: 0,
   backgroundColor: "#000000B3",
   zIndex: 5,
+});
+
+export const SuccessStyle = styled(Box)({
+  backgroundColor: "#ffffff",
+  color: "#000",
+  padding: 30,
+  borderRadius: 6,
+
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 });
