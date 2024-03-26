@@ -75,20 +75,20 @@ const Result: React.FC = () => {
   }
 
   return (
-    <Box sx={{...resultMainContainer}}>
+    <Box sx={{ ...resultMainContainer }}>
       {matchingResult && (
         <Box
           sx={{
             ...BoxContainerStyles,
           }}
         >
-          <QuizHeader value={10}/>
+          <QuizHeader value={10} />
           <Box sx={{ ...resultBoxStyles }} pb={"1rem"}>
-            <Typography sx={{...textTypography}}>
-            რომელი პროფესიაა შენთვის განკუთვნილი?
+            <Typography sx={{ ...textTypography }}>
+              რომელი პროფესიაა შენთვის განკუთვნილი?
             </Typography>
-            <Typography sx={{ ...resultTypographyStyles }} p={"1rem 0"}>
-              გილოცავ! <br/>
+            <Typography sx={{ ...resultTypographyStyles }} pb={4}>
+              გილოცავ! <br />
               შენ შეგეფერება {result}
             </Typography>
             <Box
@@ -96,48 +96,36 @@ const Result: React.FC = () => {
                 ...BoxedContent,
               }}
             >
-              <Box maxWidth={450} height={{ md: 400, sm: 300, xs: 200 }}>
-                <img
-                  src={matchingResult.gif}
-                  alt="gif"
-                  width={"100%"}
-                  height={"100%"}
-                  style={{
-                    borderRadius: "0.5rem",
-                    boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-                  }}
-                />
+              <Box maxWidth={570} height={{ md: 400, sm: 300, xs: 200 }}>
+                <img src={matchingResult.gif} alt="gif" />
               </Box>
-              <Box sx={{textAlign: 'center'}}>
+              <Box sx={{ textAlign: "center" }}>
                 <Typography sx={{ ...resultTextStyles }}>
                   {matchingResult.text}
                 </Typography>
-                <Typography sx={{ ...resultTextStyles }}>
-                  მეტის სანახავად შეგიძლია ეწვიო:{" "}
+                <Typography sx={{ ...resultTextStyles }} mb={7}>
+                  მეტის სანახავად შეგიძლია ეწვიო:
                 </Typography>
               </Box>
             </Box>
-           <Box sx={{...buttons}}>
-                  <Link
-                    href={matchingResult?.link}
-                    target="_blank"
-                    style={{
-                      color: "white",
-                      width: "100%",
-                      display: "block",
-                    }}
-                  >
-                     <Typography sx={{ ...resultLinkContainerStyles }}>იყიდე კურსი</Typography>
-                    
-                  </Link>
-            <Box onClick={onClick}>
-              <BtnComponent text="შემდეგი"  checked={true} variant={"outlined"}/>
+            <Box sx={{ ...buttons }}>
+              <Link href={matchingResult?.link} target="_blank">
+                <Typography sx={{ ...resultLinkContainerStyles }}>
+                  იყიდე კურსი
+                </Typography>
+              </Link>
+              <Box onClick={onClick}>
+                <BtnComponent
+                  text="შემდეგი"
+                  checked={true}
+                  variant={"outlined"}
+                />
+              </Box>
             </Box>
-           </Box>
           </Box>
         </Box>
       )}
-      {showModal && <ModalForm onClose={onClose}/>}
+      {showModal && <ModalForm onClose={onClose} />}
     </Box>
   );
 };

@@ -45,11 +45,10 @@ export const TestBox: SxProps = {
   },
 };
 
-
 export const RadioContent: SxProps = {
   maxWidth: 537,
   width: "100%",
-  height: 'auto',
+  height: "auto",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -75,6 +74,8 @@ export const RadioContent: SxProps = {
 };
 
 export const RadioInsideContent: SxProps = {
+  width: "100%",
+
   img: {
     borderRadius: 2,
     width: "100%",

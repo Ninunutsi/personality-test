@@ -1,19 +1,20 @@
 import { SxProps } from "@mui/system";
 import { keyframes } from "@emotion/react";
 
-export const resultMainContainer: SxProps ={
-  marginTop: '1.5rem',
-  border: '2px solid black',
-  borderRadius: '6px'
-}
+export const resultMainContainer: SxProps = {
+  marginTop: "1.5rem",
+  border: "2px solid black",
+  borderRadius: "6px",
+};
 
 export const resultTypographyStyles: SxProps = {
   color: "#FF9D9C",
-  fontSize: "40px",
+  fontSize: "clamp(32px, 4vw, 80px)",
+  lineHeight: "normal",
+  fontWeight: "bold",
   width: "100%",
   textAlign: "center",
-  letterSpacing: "2px",
-  borderRadius: "0.5rem",
+  letterSpacing: "1px",
 
   "@media screen and (max-width: 580px)": {
     borderRadius: 0,
@@ -23,21 +24,18 @@ export const resultTypographyStyles: SxProps = {
 export const resultTextStyles: SxProps = {
   color: "black",
   fontSize: "1.2rem",
-
-
 };
 
 export const resultBoxStyles: SxProps = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: '100%',
-  color: 'black',
+  width: "100%",
+  color: "black",
   flexDirection: "column",
-  gap: "2rem",
+  // gap: "2rem",
   backgroundColor: "white",
   borderRadius: "0.5rem",
-
 
   "@media screen and (max-width: 580px)": {
     borderRadius: 0,
@@ -45,14 +43,15 @@ export const resultBoxStyles: SxProps = {
 };
 
 export const textTypography: SxProps = {
-  marginTop: '3rem',
+  margin: "3rem 0 0.5rem",
   fontSize: 26,
-  textAlign: 'center',
+  fontWeight: "bold",
+  textAlign: "center",
 
   "@media screen and (max-width: 580px)": {
-    fontSize: 20
+    fontSize: 20,
   },
-}
+};
 
 export const resultLinkContainerStyles: SxProps = {
   width: "100%",
@@ -60,8 +59,9 @@ export const resultLinkContainerStyles: SxProps = {
   backgroundColor: "#ab7df4",
   borderRadius: "4px",
   padding: "23px 79px",
-  minWidth: '64px',
-  boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
+  minWidth: "64px",
+  boxShadow:
+    "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
   textAlign: "center",
   fontWeight: 500,
   fontSize: "1.25rem",
@@ -79,8 +79,8 @@ export const BoxContainerStyles: SxProps = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  flexDirection: 'column',
-  color: 'white'
+  flexDirection: "column",
+  color: "white",
 };
 
 export const BoxedContent: SxProps = {
@@ -89,10 +89,15 @@ export const BoxedContent: SxProps = {
   justifyContent: "center",
   gap: "2rem",
   padding: "0 1.5rem",
-  flexDirection: 'column',
+  flexDirection: "column",
 
-  img: {
-    width: '100%'
+  div: {
+    img: {
+      width: "100%",
+      height: "100%",
+      borderRadius: "0.5rem",
+      boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+    },
   },
 
   "@media screen and (max-width: 768px)": {
@@ -101,12 +106,27 @@ export const BoxedContent: SxProps = {
 };
 
 export const buttons: SxProps = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: '1rem',
+  display: "flex",
+  alignItems: "center",
+  gap: "1rem",
 
-  "@media screen and (max-width: 580px)": {
-    flexDirection: 'column'
+  a: {
+    color: "white",
+    width: "100%",
+    display: "block",
   },
 
-}
+  "@media screen and (max-width: 580px)": {
+    flexDirection: "column",
+
+    width: "100%",
+    padding: "0.5rem",
+
+    div: {
+      width: "100%",
+      button: {
+        width: "100%",
+      },
+    },
+  },
+};
