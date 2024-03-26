@@ -16,7 +16,11 @@ export const StarStyle: SxProps = {
   backgroundPosition: "center",
   width: 200,
   height: 200,
-  animation: `${StarRotate} 10s linear infinite`, // Changed ease-in-out to linear for smoother continuous rotation
+  animation: `${StarRotate} 10s linear infinite`,
+
+  "@media (max-width: 1024px)": {
+    alignSelf: "center",
+  },
 };
 
 export const TextStyle: SxProps = {
@@ -35,8 +39,24 @@ export const ContentStyle: SxProps = {
   padding: "0 64px 64px",
   color: "black",
 
-  h2: {
-    fontWeight: "bold",
-    maxWidth: 930,
+  "@media (max-width: 900px)": {
+    alignItems: "center",
+    textAlign: "center",
+
+    padding: "0 30px 30px",
+  },
+
+  "@media (max-width: 768px)": {
+    padding: "0 15px 15px",
+  },
+};
+
+export const ButtonForm: SxProps = {
+  "@media (max-width: 1024px)": {
+    width: "100%",
+
+    button: {
+      width: "100%",
+    },
   },
 };

@@ -26,6 +26,11 @@ export const ButtonStyle = styled(Button)({
   "&:hover": {
     backgroundColor: "#ab7df4",
   },
+
+  "@media (max-width: 768px) ": {
+    padding: "15px 40px",
+    fontSize: "1rem",
+  },
 });
 
 export const BgBox = styled(Box)({

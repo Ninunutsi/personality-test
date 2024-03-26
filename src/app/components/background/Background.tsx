@@ -1,6 +1,5 @@
-import { BgImage } from "@/app/mainpage/HomePageStyle";
-import { Box } from "@mui/material";
 import React from "react";
+import { BgImage } from "@/app/mainpage/HomePageStyle";
 
 const Background = () => {
   return (

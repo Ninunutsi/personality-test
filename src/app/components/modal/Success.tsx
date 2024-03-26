@@ -1,8 +1,8 @@
-import { Box, Typography } from "@mui/material";
-import { FixedPos, SuccessStyle } from "./ModalFormStyle";
 import React from "react";
 import Image from "next/image";
 import BtnComponent from "../button/btn-component";
+import { Typography } from "@mui/material";
+import { FixedPos, SuccessStyle } from "./ModalFormStyle";
 
 const Success = () => {
   return (

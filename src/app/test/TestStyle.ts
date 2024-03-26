@@ -19,11 +19,29 @@ export const TestBox: SxProps = {
     marginBottom: 10,
     maxWidth: 750,
     textAlign: "center",
+
+    "@media (max-width: 900px)": {
+      height: "auto",
+      fontSize: 32,
+    },
+
+    "@media (max-width: 768px)": {
+      fontSize: 22,
+      marginBottom: 5,
+    },
   },
 
   form: {
     width: "100%",
     alignSelf: "center",
+  },
+
+  "@media (max-width: 900px)": {
+    padding: "40px 32px 32px",
+  },
+
+  "@media (max-width: 768px)": {
+    padding: "40px 15px 32px",
   },
 };
 
@@ -44,6 +62,14 @@ export const RadioContent: SxProps = {
   label: {
     width: "100%",
   },
+
+  "@media (max-width: 400px)": {
+    label: {
+      span: {
+        fontSize: 12,
+      },
+    },
+  },
 };
 
 export const RadioInsideContent: SxProps = {
@@ -53,5 +79,11 @@ export const RadioInsideContent: SxProps = {
     borderRadius: 2,
     width: "100%",
     height: 330,
+  },
+
+  "@media (max-width: 768px)": {
+    img: {
+      height: "100%",
+    },
   },
 };

@@ -1,18 +1,22 @@
 "use client";
 
-import { BoxStyle } from "@/app/mainpage/HomePageStyle";
-import { Box, Typography } from "@mui/material";
-import { StarStyle, TextStyle, ContentStyle } from "./StarterStyle";
+import React from "react";
 import QuizHeader from "../quizheader/QuizHeader";
 import BtnComponent from "../button/btn-component";
 import Image from "next/image";
 import Link from "next/link";
+import { BoxStyle } from "@/app/mainpage/HomePageStyle";
+import { Box, Typography } from "@mui/material";
+import { StarStyle, TextStyle, ContentStyle, ButtonForm } from "./StarterStyle";
 
 const Starter = () => {
   return (
     <BoxStyle component="main">
       <QuizHeader />
-      <Box position={"relative"}>
+      <Box
+        position={"relative"}
+        sx={{ alignSelf: { xs: "center", sm: "center", md: "start" } }}
+      >
         <Box sx={{ ...StarStyle }} position={"relative"}></Box>
         <Typography variant="h6" sx={{ ...TextStyle }}>
           Quiz
@@ -25,14 +29,37 @@ const Starter = () => {
           height={20}
           alt="skillwill logo"
         />
-        <Typography variant="h2" mt={2} mb={3}>
+        <Typography
+          maxWidth={{ xs: "100%", sm: 500, md: 930 }}
+          fontWeight={700}
+          mt={2}
+          mb={3}
+          sx={{
+            fontSize: {
+              xs: "h6.fontSize",
+              sm: "h4.fontSize",
+              md: "h2.fontSize",
+            },
+          }}
+        >
           რომელი პროფესიაა შენთვის განკუთვნილი?
         </Typography>
-        <Typography variant="h5" mb={8}>
+        <Typography
+          maxWidth={{ xs: "100%", sm: 300, md: 500 }}
+          fontWeight={700}
+          sx={{
+            fontSize: {
+              xs: "body1.fontSize",
+              sm: "h6.fontSize",
+              md: "h5.fontSize",
+            },
+          }}
+          mb={8}
+        >
           გინდა ისწავლო რაც მართლა გამოგადგება, მაგრამ არ იცი საიდან დაიწყო?
           მაშინ
         </Typography>
-        <Box alignSelf={"end"} component="form">
+        <Box alignSelf={"end"} component="form" sx={{ ...ButtonForm }}>
           <Link href={"/test"}>
             <BtnComponent text="გააკეთე ტესტი" checked={true} />
           </Link>

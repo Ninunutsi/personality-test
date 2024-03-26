@@ -19,4 +19,8 @@ export const HeaderContainer: SxProps = {
   padding: "0 200px",
   maxWidth: 1920,
   margin: "0 auto",
+
+  "@media (max-width: 1441px)": {
+    padding: "0 100px",
+  },
 };

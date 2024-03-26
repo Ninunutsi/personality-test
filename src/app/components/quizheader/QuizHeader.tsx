@@ -1,22 +1,47 @@
+import React from "react";
 import { Box, Typography } from "@mui/material";
 import { QuizHeaderStyle } from "./QuizHeaderStyle";
-import React from "react";
 
 const QuizHeader: React.FC<{ value?: number }> = ({ value }) => {
   return (
     <Box sx={{ ...QuizHeaderStyle }}>
-      <Typography variant="h4" fontWeight={700}>
+      <Typography
+        fontWeight={700}
+        sx={{
+          fontSize: {
+            xs: 14,
+            sm: "h5.fontSize",
+            md: "h4.fontSize",
+          },
+        }}
+      >
         SKILLWILL QUIZ
       </Typography>
       {value && (
         <Typography
-          variant="h5"
+          sx={{
+            fontSize: {
+              xs: 12,
+              sm: "h6.fontSize",
+              md: "h5.fontSize",
+            },
+          }}
           display={"flex"}
           gap={1.5}
           alignItems={"center"}
         >
           Question {value}
-          <Typography variant="h4" fontWeight={700} component="span">
+          <Typography
+            fontWeight={700}
+            component="span"
+            sx={{
+              fontSize: {
+                xs: 14,
+                sm: "h5.fontSize",
+                md: "h4.fontSize",
+              },
+            }}
+          >
             / 10
           </Typography>
         </Typography>
