@@ -26,6 +26,7 @@ export interface IBtn {
   text: string;
   href?: string | undefined;
   checked?: boolean;
+  variant?: string
 }
 
 // useRequest Interface

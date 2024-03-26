@@ -18,6 +18,18 @@ export const BoxStyle = styled(Box)({
   },
 });
 
+export const ButtonStyleOutlined = styled(Button)({
+  fontSize: "1.25rem",
+  padding: "20px 79px",
+  color: '#ab7df4',
+  border: '1px solid #ab7df4',
+
+  "&:hover": {
+    backgroundColor: "#fcfaff",
+    border: '1px solid #ab7df4',
+  },
+})
+
 export const ButtonStyle = styled(Button)({
   backgroundColor: "#ab7df4",
   fontSize: "1.25rem",
