@@ -21,6 +21,7 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
+import { AnimatePresence, motion } from "framer-motion";
 
 const QuestionForm = () => {
   const { attributes, setAttributes } = useValuesContext();
@@ -31,6 +32,7 @@ const QuestionForm = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const [radioText, setRadioText] = useState<string>("");
   const [radioGif, setRadioGif] = useState<string>("");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const router = useRouter();
 
@@ -70,6 +72,7 @@ const QuestionForm = () => {
     );
     selectedOption && setRadioText(selectedOption.text);
     selectedGif && setRadioGif(selectedGif.radioGif);
+
   };
 
   return (
@@ -82,21 +85,30 @@ const QuestionForm = () => {
         <Box component="form" onSubmit={onFormSubmit} key={question_number}>
           <RadioGroup onChange={handleRadioChange}>
             {question.options.map(({ answer, attributeVal }, index) => (
-              <Box sx={{ ...RadioContent }} key={index} mb={1}>
+              <>
+                <Box sx={{ ...RadioContent }} key={index} layout
+      mb={1} component={motion.div} whileTap={{ scale: 0.95 }} transition={{ ease: "easeOut", duration: 0.5 }}>
                 <FormControlLabel
                   value={attributeVal}
                   control={<Radio />}
                   label={answer}
                 />
-                {value === attributeVal && (
-                  <Box sx={{ ...RadioInsideContent }}>
+                  <AnimatePresence>
+                  {value === attributeVal ? (
+                  <Box sx={{ ...RadioInsideContent }} component={motion.div} initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ display: 'none'}}
+                  transition={{ ease: "easeOut", duration: 1 }}
+                  >
                     <img src={radioGif} alt={question_text} />
                     <Typography variant="body2" lineHeight={2.5}>
                       {radioText}
                     </Typography>
                   </Box>
-                )}
+                ) : null}
+                  </AnimatePresence>
               </Box>
+              </>
             ))}
           </RadioGroup>
           <Box
