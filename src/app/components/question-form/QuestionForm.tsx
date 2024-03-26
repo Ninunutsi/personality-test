@@ -95,6 +95,7 @@ const QuestionForm = () => {
                 />
                   <AnimatePresence>
                   {value === attributeVal ? (
+<<<<<<< Updated upstream
                   <Box sx={{ ...RadioInsideContent }} component={motion.div} initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ display: 'none'}}
@@ -107,6 +108,24 @@ const QuestionForm = () => {
                   </Box>
                 ) : null}
                   </AnimatePresence>
+=======
+                    <Box
+                      sx={{ ...RadioInsideContent }}
+                      width={"100%"}
+                      component={motion.div}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ display: "none" }}
+                      transition={{ ease: "easeOut", duration: 1 }}
+                    >
+                      <img src={radioGif} alt={question_text} />
+                      <Typography variant="body2" lineHeight={2.5}>
+                        {radioText}
+                      </Typography>
+                    </Box>
+                  ) : null}
+                </AnimatePresence>
+>>>>>>> Stashed changes
               </Box>
               </>
             ))}
