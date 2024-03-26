@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import resultsData from "../../../data/results.json";
 import BtnComponent from "../button/btn-component";
 import Link from "next/link";
-import Countdown from "../countdown";
 import ModalForm from "../modal/ModalForm";
 import UnmutchingRes from "../unmatchingres/UnmutchingRes";
 import { useValuesContext } from "@/app/context/ValuesContext";
@@ -16,20 +15,17 @@ import {
   resultBoxStyles,
   BoxContainerStyles,
   BoxedContent,
+  textTypography,
+  resultMainContainer,
+  buttons,
 } from "./resultStyles";
+import QuizHeader from "../quizheader/QuizHeader";
 
 const Result: React.FC = () => {
   const { attributes } = useValuesContext();
   const [result, setResult] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [showCountdown, setShowCountdown] = useState<boolean>(true);
   const [wait, setWait] = useState<boolean>(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowCountdown(false);
-    }, 3000);
-  }, []);
 
   useEffect(() => {
     let counts: { [key: string]: number } = {};
@@ -74,23 +70,26 @@ const Result: React.FC = () => {
     setShowModal(false);
   };
 
-  if (showCountdown && matchingResult) return <Countdown />;
-
   if (wait && !matchingResult) {
     return <UnmutchingRes />;
   }
 
   return (
-    <Box>
+    <Box sx={{...resultMainContainer}}>
       {matchingResult && (
         <Box
           sx={{
             ...BoxContainerStyles,
           }}
         >
+          <QuizHeader value={10}/>
           <Box sx={{ ...resultBoxStyles }} pb={"1rem"}>
+            <Typography sx={{...textTypography}}>
+            რომელი პროფესიაა შენთვის განკუთვნილი?
+            </Typography>
             <Typography sx={{ ...resultTypographyStyles }} p={"1rem 0"}>
-              {result}
+              გილოცავ! <br/>
+              შენ შეგეფერება {result}
             </Typography>
             <Box
               sx={{
@@ -109,14 +108,16 @@ const Result: React.FC = () => {
                   }}
                 />
               </Box>
-              <Box>
+              <Box sx={{textAlign: 'center'}}>
                 <Typography sx={{ ...resultTextStyles }}>
                   {matchingResult.text}
                 </Typography>
                 <Typography sx={{ ...resultTextStyles }}>
                   მეტის სანახავად შეგიძლია ეწვიო:{" "}
                 </Typography>
-                <Box sx={{ ...resultLinkContainerStyles }}>
+              </Box>
+            </Box>
+           <Box sx={{...buttons}}>
                   <Link
                     href={matchingResult?.link}
                     target="_blank"
@@ -124,21 +125,19 @@ const Result: React.FC = () => {
                       color: "white",
                       width: "100%",
                       display: "block",
-                      padding: "0.5rem",
                     }}
                   >
-                    {result}
+                     <Typography sx={{ ...resultLinkContainerStyles }}>იყიდე კურსი</Typography>
+                    
                   </Link>
-                </Box>
-              </Box>
-            </Box>
             <Box onClick={onClick}>
-              <BtnComponent text="მიიღე გათამაშებაში მონაწილეობა" />
+              <BtnComponent text="შემდეგი"  checked={true} variant={"outlined"}/>
             </Box>
+           </Box>
           </Box>
         </Box>
       )}
-      {showModal && <ModalForm onClose={onClose} />}
+      {showModal && <ModalForm onClose={onClose}/>}
     </Box>
   );
 };
