@@ -111,7 +111,7 @@ export const buttons: SxProps = {
   gap: "1rem",
 
   a: {
-    color: "white",
+    color: "#ffffff",
     width: "100%",
     display: "block",
   },
