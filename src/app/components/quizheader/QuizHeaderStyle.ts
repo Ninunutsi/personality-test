@@ -7,5 +7,10 @@ export const QuizHeaderStyle: SxProps = {
   backgroundColor: "#7DC0A7",
 
   display: "flex",
+  alignItems: "center",
   justifyContent: "space-between",
+
+  "@media (max-width: 1024px)": {
+    padding: "20px 30px",
+  },
 };

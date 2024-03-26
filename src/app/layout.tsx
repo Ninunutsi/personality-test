@@ -1,11 +1,11 @@
 import "./globals.css";
+import Header from "./components/header";
+import Background from "./components/background/Background";
 import { ValuesProvider } from "./context/ValuesContext";
 import { Inter } from "next/font/google";
 import { BgBox } from "./mainpage/HomePageStyle";
 import { Metadata } from "next/types";
-import Header from "./components/header";
 import { Box } from "@mui/material";
-import Background from "./components/background/Background";
 
 const inter = Inter({ subsets: ["latin"] });
 

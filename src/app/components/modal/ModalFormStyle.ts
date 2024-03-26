@@ -69,4 +69,10 @@ export const SuccessStyle = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+
+  "@media (max-width: 768px)": {
+    paddingTop: 150,
+    width: "100%",
+    height: "100%",
+  },
 });

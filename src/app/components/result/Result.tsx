@@ -1,8 +1,5 @@
 "use client";
 
-import { useValuesContext } from "@/app/context/ValuesContext";
-import { Box, Typography } from "@mui/material";
-import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import resultsData from "../../../data/results.json";
 import BtnComponent from "../button/btn-component";
@@ -10,6 +7,8 @@ import Link from "next/link";
 import Countdown from "../countdown";
 import ModalForm from "../modal/ModalForm";
 import UnmutchingRes from "../unmatchingres/UnmutchingRes";
+import { useValuesContext } from "@/app/context/ValuesContext";
+import { Box, Typography } from "@mui/material";
 import {
   resultTypographyStyles,
   resultTextStyles,
@@ -25,8 +24,6 @@ const Result: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [showCountdown, setShowCountdown] = useState<boolean>(true);
   const [wait, setWait] = useState<boolean>(false);
-
-  const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => {

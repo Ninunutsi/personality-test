@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useScrollToTop from "@/app/hooks/useScrollToTop";
+import { Box } from "@mui/material";
 import { ButtonStyle } from "@/app/mainpage/HomePageStyle";
 import { IBtn } from "@/app/interfaces/interfaces";
 import { useRouter } from "next/navigation";
-import { Box } from "@mui/material";
-import useScrollToTop from "@/app/hooks/useScrollToTop";
 
 const BtnComponent: React.FC<IBtn> = ({ text, href, checked }) => {
   const router = useRouter();

@@ -7,12 +7,13 @@ import BtnComponent from "../button/btn-component";
 import { useRouter } from "next/navigation";
 import { QuestionProps } from "@/app/interfaces/interfaces";
 import { BoxStyle } from "@/app/mainpage/HomePageStyle";
+import { ButtonForm } from "../starter/StarterStyle";
+import { useValuesContext } from "@/app/context/ValuesContext";
 import {
   TestBox,
   RadioContent,
   RadioInsideContent,
 } from "@/app/test/TestStyle";
-import { useValuesContext } from "@/app/context/ValuesContext";
 import {
   Box,
   FormControlLabel,
@@ -75,7 +76,7 @@ const QuestionForm = () => {
     <BoxStyle>
       <QuizHeader value={questIndex} />
       <Box sx={{ ...TestBox }}>
-        <Typography variant="h2" height={80}>
+        <Typography variant="h2" height={{ xs: "auto", sm: "auto", md: 80 }}>
           {question_text}
         </Typography>
         <Box component="form" onSubmit={onFormSubmit} key={question_number}>
@@ -98,7 +99,12 @@ const QuestionForm = () => {
               </Box>
             ))}
           </RadioGroup>
-          <Box mt={15} mr={{ md: 1, xs: 0, sm: 2 }} textAlign={"end"}>
+          <Box
+            sx={{ ...ButtonForm }}
+            mt={{ xs: 3, sm: 5, md: 10 }}
+            mr={{ md: 1, xs: 0, sm: 2 }}
+            textAlign={"end"}
+          >
             <BtnComponent text="შემდეგი" checked={checked} />
           </Box>
         </Box>

@@ -1,8 +1,8 @@
-import { Box } from "@mui/material";
-import Image from "next/image";
 import React from "react";
-import { HeaderContainer, HeaderStyles } from "./HeaderStyle";
+import Image from "next/image";
 import Link from "next/link";
+import { Box } from "@mui/material";
+import { HeaderContainer, HeaderStyles } from "./HeaderStyle";
 
 const Header = () => {
   return (

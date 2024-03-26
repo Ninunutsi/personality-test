@@ -1,7 +1,7 @@
 "use client";
 
-import { Box, TextField, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
+import { Box, TextField, Typography } from "@mui/material";
 import { ModalFormBox, Overlay, FixedPos } from "./ModalFormStyle";
 import BtnComponent from "../button/btn-component";
 import Success from "./Success";
@@ -41,6 +41,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           width={{ md: 500, sm: 400, xs: "100%" }}
           height={{ md: "auto", sm: "auto", xs: "100%" }}
           p={{ md: 5, sm: 4, xs: 2 }}
+          pt={{ xs: 15 }}
           component="form"
           onSubmit={handleSubmit}
         >
