@@ -75,7 +75,8 @@ export const RadioContent: SxProps = {
 
 export const RadioInsideContent: SxProps = {
   width: "100%",
-
+position: 'relative',
+zIndex: 0,
   img: {
     borderRadius: 2,
     width: "100%",
