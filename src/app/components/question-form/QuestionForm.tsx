@@ -22,6 +22,7 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
+import { GifText } from "../result/resultStyles";
 
 const QuestionForm = () => {
   const { attributes, setAttributes } = useValuesContext();
@@ -86,7 +87,6 @@ const QuestionForm = () => {
               <Box
                 sx={{ ...RadioContent }}
                 key={index}
-                layout
                 mb={1}
                 component={motion.div}
                 whileTap={{ scale: 0.95 }}
@@ -97,23 +97,16 @@ const QuestionForm = () => {
                   control={<Radio />}
                   label={answer}
                 />
-                <AnimatePresence>
                   {value === attributeVal ? (
                     <Box
                       sx={{ ...RadioInsideContent }}
-                      component={motion.div}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ display: "none" }}
-                      transition={{ ease: "easeOut", duration: 1 }}
                     >
                       <img src={radioGif} alt={question_text} />
-                      <Typography variant="body2" lineHeight={2.5}>
+                      <Typography variant="body2" lineHeight={2.5} sx={{...GifText}}>
                         {radioText}
                       </Typography>
                     </Box>
                   ) : null}
-                </AnimatePresence>
               </Box>
             ))}
           </RadioGroup>

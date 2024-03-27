@@ -1,5 +1,11 @@
 import { SxProps } from "@mui/system";
-import { keyframes } from "@emotion/react";
+
+export const GifText: SxProps = {
+  textAlign: 'center',
+  fontSize: 'clamp(14px, 3vw, 18px)',
+  lineHeight: '30px',
+  padding: '20px 0'
+}
 
 export const resultMainContainer: SxProps = {
   marginTop: "1.5rem",
@@ -10,7 +16,7 @@ export const resultMainContainer: SxProps = {
 export const resultTypographyStyles: SxProps = {
   color: "#FF9D9C",
   fontSize: "clamp(32px, 4vw, 80px)",
-  lineHeight: "normal",
+  lineHeight: "75px",
   fontWeight: "bold",
   width: "100%",
   textAlign: "center",

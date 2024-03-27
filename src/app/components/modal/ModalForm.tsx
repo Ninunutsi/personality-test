@@ -56,6 +56,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <Box className="namesInput">
             <TextField
               className="inputField"
+              sx={{borderColor: 'red'}}
               label="სახელი"
               placeholder="სახელი"
               inputRef={nameRef}
