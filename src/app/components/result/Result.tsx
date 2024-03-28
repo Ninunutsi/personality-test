@@ -22,7 +22,7 @@ import {
 import QuizHeader from "../quizheader/QuizHeader";
 
 const Result: React.FC = () => {
-  const { attributes } = useValuesContext();
+  const { attributes, setLastValue } = useValuesContext();
   const [result, setResult] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
   const [wait, setWait] = useState<boolean>(false);
@@ -47,8 +47,10 @@ const Result: React.FC = () => {
 
     if (equalCounts) {
       setResult(attributes[random]);
+      setLastValue(attributes[random]);
     } else {
       setResult(mostRepeatedWord);
+      setLastValue(mostRepeatedWord);
     }
   }, []);
 
@@ -103,7 +105,7 @@ const Result: React.FC = () => {
                 <Typography sx={{ ...resultTextStyles }}>
                   {matchingResult.text}
                 </Typography>
-                <Typography sx={{ ...resultTextStyles }} mb={7}>
+                <Typography sx={{ ...resultTextStyles }} mb={2}>
                   მეტის სანახავად შეგიძლია ეწვიო:
                 </Typography>
               </Box>

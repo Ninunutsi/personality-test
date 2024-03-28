@@ -9,9 +9,12 @@ export const ValuesProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [attributes, setAttributes] = useState<string[]>([]);
+  const [lastValue, setLastValue] = useState<string>("");
 
   return (
-    <ValContext.Provider value={{ attributes, setAttributes }}>
+    <ValContext.Provider
+      value={{ attributes, setAttributes, lastValue, setLastValue }}
+    >
       {children}
     </ValContext.Provider>
   );

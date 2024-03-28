@@ -18,6 +18,8 @@ export interface QuestionProps {
 export interface ValuesContextType {
   attributes: string[];
   setAttributes: React.Dispatch<React.SetStateAction<string[]>>;
+  lastValue: string;
+  setLastValue: React.Dispatch<React.SetStateAction<string>>;
 }
 
 // Button interface

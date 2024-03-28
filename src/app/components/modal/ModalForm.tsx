@@ -5,13 +5,15 @@ import { Box, TextField, Typography } from "@mui/material";
 import { ModalFormBox, Overlay, FixedPos } from "./ModalFormStyle";
 import BtnComponent from "../button/btn-component";
 import Success from "./Success";
+import { useValuesContext } from "@/app/context/ValuesContext";
 
 const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const lastName = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
-  const numberForm = useRef<HTMLInputElement | null>(null);
+  const numberRef = useRef<HTMLInputElement | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
+  const { lastValue } = useValuesContext();
 
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
@@ -19,7 +21,8 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       name: nameRef.current?.value || "",
       lastName: lastName.current?.value || "",
       email: emailRef.current?.value || "",
-      number: numberForm.current?.value || "",
+      number: numberRef.current?.value || "",
+      lastValue: lastValue,
     };
 
     console.log(UserInfo);
@@ -28,7 +31,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     nameRef.current!.value = "";
     lastName.current!.value = "";
     emailRef.current!.value = "";
-    numberForm.current!.value = "";
+    numberRef.current!.value = "";
   };
 
   return (
@@ -46,10 +49,10 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           onSubmit={handleSubmit}
         >
           <Box className="title">
-            <Typography mb={3} variant="h5">
+            <Typography mb={1} variant="h5">
               პერსონალური მონაცემები
             </Typography>
-            <Typography mb={2} variant="h6">
+            <Typography mb={1} variant="h6">
               შეიყვანეთ თქვენი მონაცემები
             </Typography>
           </Box>
@@ -72,7 +75,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             className="inputField"
             label="ნომერი"
             placeholder="ნომერი"
-            inputRef={emailRef}
+            inputRef={numberRef}
             type="text"
           />
           <TextField
