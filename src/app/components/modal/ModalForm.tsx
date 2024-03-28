@@ -10,6 +10,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const lastName = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
+  const numberForm = useRef<HTMLInputElement | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent): void => {
@@ -18,6 +19,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       name: nameRef.current?.value || "",
       lastName: lastName.current?.value || "",
       email: emailRef.current?.value || "",
+      number: numberForm.current?.value || "",
     };
 
     console.log(UserInfo);
@@ -26,6 +28,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     nameRef.current!.value = "";
     lastName.current!.value = "";
     emailRef.current!.value = "";
+    numberForm.current!.value = "";
   };
 
   return (
@@ -50,18 +53,27 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               შეიყვანეთ თქვენი მონაცემები
             </Typography>
           </Box>
+          <Box className="namesInput">
+            <TextField
+              className="inputField"
+              sx={{ borderColor: "red" }}
+              label="სახელი"
+              placeholder="სახელი"
+              inputRef={nameRef}
+            />
+            <TextField
+              className="inputField"
+              label="გვარი"
+              placeholder="გვარი"
+              inputRef={lastName}
+            />
+          </Box>
           <TextField
             className="inputField"
-            sx={{ borderColor: "red" }}
-            label="სახელი"
-            placeholder="სახელი"
-            inputRef={nameRef}
-          />
-          <TextField
-            className="inputField"
-            label="გვარი"
-            placeholder="გვარი"
-            inputRef={lastName}
+            label="ნომერი"
+            placeholder="ნომერი"
+            inputRef={emailRef}
+            type="text"
           />
           <TextField
             className="inputField"

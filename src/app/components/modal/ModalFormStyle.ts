@@ -20,6 +20,22 @@ export const ModalFormBox = styled(Box)({
 
   ".inputField": { margin: 5, width: "100%", maxHeight: 45 },
 
+  ".namesInput": {
+    width: "100%",
+    display: "flex",
+    gap: 12,
+
+    "@media (max-width: 768px)": {
+      flexDirection: "column",
+      gap: 26,
+    },
+
+    ".inputField": {
+      margin: 0,
+      width: "100%",
+    },
+  },
+
   ".title": {
     width: "100%",
     textAlign: "center",
@@ -60,3 +76,23 @@ export const SuccessStyle = styled(Box)({
     height: "100%",
   },
 });
+
+export const inputBox: SxProps = {
+  display: "flex",
+  width: "100%",
+  justifyContent: "space-between",
+
+  ".inputField": {
+    width: "100%",
+  },
+
+  "@media (max-width: 1023px)": {
+    flexDirection: "column",
+    alignItems: "start",
+    gap: 2,
+
+    ".inputField": {
+      width: "100%",
+    },
+  },
+};
