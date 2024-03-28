@@ -1,29 +1,23 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { QuizHeaderStyle } from "./QuizHeaderStyle";
+import BtnComponent from "../button/btn-component";
 
-const QuizHeader: React.FC<{ value?: number }> = ({ value }) => {
+const QuizHeader: React.FC<{
+  value?: number | string;
+  checked?: boolean;
+  visible: boolean;
+}> = ({ value, checked, visible }) => {
   return (
     <Box sx={{ ...QuizHeaderStyle }}>
-      <Typography
-        fontWeight={700}
-        sx={{
-          fontSize: {
-            xs: 14,
-            sm: "h5.fontSize",
-            md: "h4.fontSize",
-          },
-        }}
-      >
-        SKILLWILL QUIZ
-      </Typography>
       {value && (
         <Typography
+          className="text"
           sx={{
             fontSize: {
-              xs: 12,
-              sm: "h6.fontSize",
-              md: "h5.fontSize",
+              xs: "body1.fontSize",
+              sm: "body1.fontSize",
+              md: "h6.fontSize",
             },
           }}
           display={"flex"}
@@ -36,14 +30,33 @@ const QuizHeader: React.FC<{ value?: number }> = ({ value }) => {
             component="span"
             sx={{
               fontSize: {
-                xs: 14,
-                sm: "h5.fontSize",
-                md: "h4.fontSize",
+                xs: "h6.fontSize",
+                sm: "h6.fontSize",
+                md: "h5.fontSize",
               },
             }}
           >
             / 10
           </Typography>
+        </Typography>
+      )}
+      {visible && (
+        <Box mr={{ md: 1, xs: 0, sm: 2 }} textAlign={"end"}>
+          <BtnComponent text="შემდეგი" checked={checked} />
+        </Box>
+      )}
+      {!value && (
+        <Typography
+          fontWeight={700}
+          sx={{
+            fontSize: {
+              xs: 14,
+              sm: "h5.fontSize",
+              md: "h4.fontSize",
+            },
+          }}
+        >
+          SKILLWILL QUIZ
         </Typography>
       )}
     </Box>

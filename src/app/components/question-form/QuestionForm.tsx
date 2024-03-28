@@ -75,13 +75,11 @@ const QuestionForm = () => {
   };
 
   return (
-    <BoxStyle>
-      <QuizHeader value={questIndex} />
+    <BoxStyle component="form" onSubmit={onFormSubmit}>
+      <QuizHeader value={questIndex} checked={checked} visible={true} />
       <Box sx={{ ...TestBox }}>
-        <Typography variant="h2" height={{ xs: "auto", sm: "auto", md: 80 }}>
-          {question_text}
-        </Typography>
-        <Box component="form" onSubmit={onFormSubmit} key={question_number}>
+        <Typography variant="h2">{question_text}</Typography>
+        <Box key={question_number} maxWidth={600} width={"100%"}>
           <RadioGroup onChange={handleRadioChange}>
             {question.options.map(({ answer, attributeVal }, index) => (
               <Box
@@ -97,27 +95,21 @@ const QuestionForm = () => {
                   control={<Radio />}
                   label={answer}
                 />
-                  {value === attributeVal ? (
-                    <Box
-                      sx={{ ...RadioInsideContent }}
+                {value === attributeVal ? (
+                  <Box sx={{ ...RadioInsideContent }}>
+                    <img src={radioGif} alt={question_text} />
+                    <Typography
+                      variant="body2"
+                      lineHeight={2.5}
+                      sx={{ ...GifText }}
                     >
-                      <img src={radioGif} alt={question_text} />
-                      <Typography variant="body2" lineHeight={2.5} sx={{...GifText}}>
-                        {radioText}
-                      </Typography>
-                    </Box>
-                  ) : null}
+                      {radioText}
+                    </Typography>
+                  </Box>
+                ) : null}
               </Box>
             ))}
           </RadioGroup>
-          <Box
-            sx={{ ...ButtonForm }}
-            mt={{ xs: 3, sm: 5, md: 10 }}
-            mr={{ md: 1, xs: 0, sm: 2 }}
-            textAlign={"end"}
-          >
-            <BtnComponent text="შემდეგი" checked={checked} />
-          </Box>
         </Box>
       </Box>
     </BoxStyle>

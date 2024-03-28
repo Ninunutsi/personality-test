@@ -10,6 +10,7 @@ export const BoxStyle = styled(Box)({
   color: "white",
   border: "3px solid black",
   borderRadius: 6,
+  backgroundColor: "#f8f8f8",
 
   h5: {
     lineHeight: "2rem",
@@ -21,26 +22,26 @@ export const BoxStyle = styled(Box)({
 export const ButtonStyleOutlined = styled(Button)({
   fontSize: "1.25rem",
   padding: "20px 79px",
-  color: '#ab7df4',
-  border: '1px solid #ab7df4',
+  color: "#ab7df4",
+  border: "1px solid #ab7df4",
 
   "&:hover": {
     backgroundColor: "#fcfaff",
-    border: '1px solid #ab7df4',
+    border: "1px solid #ab7df4",
   },
-})
+});
 
 export const ButtonStyle = styled(Button)({
   backgroundColor: "#ab7df4",
   fontSize: "1.25rem",
-  padding: "20px 79px",
+  padding: "10px 65px",
 
   "&:hover": {
     backgroundColor: "#ab7df4",
   },
 
   "@media (max-width: 768px) ": {
-    padding: "15px 40px",
+    padding: "10px 30px",
     fontSize: "1rem",
   },
 });

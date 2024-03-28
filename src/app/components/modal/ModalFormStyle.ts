@@ -18,22 +18,6 @@ export const ModalFormBox = styled(Box)({
   backgroundColor: "white",
   borderRadius: 10,
 
-  ".namesInput": {
-    width: "100%",
-    display: "flex",
-    gap: 12,
-
-    "@media (max-width: 768px)": {
-      flexDirection: "column",
-      gap: 26,
-    },
-
-    ".inputField": {
-      margin: 0,
-      width: "100%",
-    },
-  },
-
   ".inputField": { margin: 5, width: "100%", maxHeight: 45 },
 
   ".title": {

@@ -82,7 +82,7 @@ const Result: React.FC = () => {
             ...BoxContainerStyles,
           }}
         >
-          <QuizHeader value={10} />
+          <QuizHeader value={10} visible={false} />
           <Box sx={{ ...resultBoxStyles }} pb={"1rem"}>
             <Typography sx={{ ...textTypography }}>
               რომელი პროფესიაა შენთვის განკუთვნილი?

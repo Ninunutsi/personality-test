@@ -13,21 +13,21 @@ export const TestBox: SxProps = {
   color: "#000",
 
   h2: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: 700,
     color: "#000",
-    marginBottom: 10,
+    marginBottom: "35px",
     maxWidth: 750,
     textAlign: "center",
 
     "@media (max-width: 900px)": {
       height: "auto",
-      fontSize: 32,
+      fontSize: 26,
     },
 
     "@media (max-width: 768px)": {
-      fontSize: 22,
-      marginBottom: 5,
+      fontSize: 21,
+      marginBottom: "20px",
     },
   },
 
@@ -67,7 +67,7 @@ export const RadioContent: SxProps = {
   "@media (max-width: 400px)": {
     label: {
       span: {
-        fontSize: 12,
+        fontSize: 14,
       },
     },
   },
@@ -75,9 +75,10 @@ export const RadioContent: SxProps = {
 
 export const RadioInsideContent: SxProps = {
   width: "100%",
-position: 'relative',
-zIndex: 0,
+  position: "relative",
+  zIndex: 0,
   img: {
+    objectFit: "cover",
     borderRadius: 2,
     width: "100%",
     height: 330,

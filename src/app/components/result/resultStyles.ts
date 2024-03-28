@@ -1,11 +1,16 @@
 import { SxProps } from "@mui/system";
 
 export const GifText: SxProps = {
-  textAlign: 'center',
-  fontSize: 'clamp(14px, 3vw, 18px)',
-  lineHeight: '30px',
-  padding: '20px 0'
-}
+  textAlign: "center",
+  fontSize: "clamp(14px, 3vw, 18px)",
+  lineHeight: "30px",
+  padding: "20px 0",
+
+  "@media (max-width: 400px)": {
+    padding: "5px 0",
+    lineHeight: "20px",
+  },
+};
 
 export const resultMainContainer: SxProps = {
   marginTop: "1.5rem",

@@ -18,6 +18,8 @@ export interface QuestionProps {
 export interface ValuesContextType {
   attributes: string[];
   setAttributes: React.Dispatch<React.SetStateAction<string[]>>;
+  visible: boolean;
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // Button interface
@@ -26,7 +28,7 @@ export interface IBtn {
   text: string;
   href?: string | undefined;
   checked?: boolean;
-  variant?: string
+  variant?: string;
 }
 
 // useRequest Interface

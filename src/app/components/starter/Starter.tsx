@@ -8,11 +8,12 @@ import Link from "next/link";
 import { BoxStyle } from "@/app/mainpage/HomePageStyle";
 import { Box, Typography } from "@mui/material";
 import { StarStyle, TextStyle, ContentStyle, ButtonForm } from "./StarterStyle";
+import { useValuesContext } from "@/app/context/ValuesContext";
 
 const Starter = () => {
   return (
     <BoxStyle component="main">
-      <QuizHeader />
+      <QuizHeader visible={false} />
       <Box
         position={"relative"}
         sx={{ alignSelf: { xs: "center", sm: "center", md: "start" } }}
@@ -37,8 +38,8 @@ const Starter = () => {
           sx={{
             fontSize: {
               xs: "h6.fontSize",
-              sm: "h4.fontSize",
-              md: "h2.fontSize",
+              sm: "h5.fontSize",
+              md: "h3.fontSize",
             },
           }}
         >
@@ -50,8 +51,8 @@ const Starter = () => {
           sx={{
             fontSize: {
               xs: "body1.fontSize",
-              sm: "h6.fontSize",
-              md: "h5.fontSize",
+              sm: "body1.fontSize",
+              md: "h6.fontSize",
             },
           }}
           mb={8}
@@ -61,7 +62,7 @@ const Starter = () => {
         </Typography>
         <Box alignSelf={"end"} component="form" sx={{ ...ButtonForm }}>
           <Link href={"/test"}>
-            <BtnComponent text="გააკეთე ტესტი" checked={true} />
+            <BtnComponent text="დაიწყე ტესტი" checked={true} />
           </Link>
         </Box>
       </Box>
