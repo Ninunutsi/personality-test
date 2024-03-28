@@ -3,9 +3,16 @@
 import React, { useRef, useState } from "react";
 import { Box, TextField, Typography } from "@mui/material";
 import { ModalFormBox, Overlay, FixedPos } from "./ModalFormStyle";
+import { useValuesContext } from "@/app/context/ValuesContext";
+import { createClient } from "@supabase/supabase-js";
 import BtnComponent from "../button/btn-component";
 import Success from "./Success";
-import { useValuesContext } from "@/app/context/ValuesContext";
+
+const supabaseUrl = "https://qjpwnkassxsukpcwaakr.supabase.co";
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqcHdua2Fzc3hzdWtwY3dhYWtyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE2NDcxNTMsImV4cCI6MjAyNzIyMzE1M30.WmE-4L4Z-zrFIuszbt9SWOe60W6DG6Y-eJ4l0ySopXw";
+
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const nameRef = useRef<HTMLInputElement | null>(null);
@@ -15,18 +22,25 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [success, setSuccess] = useState<boolean>(false);
   const { lastValue } = useValuesContext();
 
-  const handleSubmit = (e: React.FormEvent): void => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const UserInfo = {
-      name: nameRef.current?.value || "",
-      lastName: lastName.current?.value || "",
-      email: emailRef.current?.value || "",
-      number: numberRef.current?.value || "",
-      lastValue: lastValue,
-    };
+    const name: string = nameRef.current?.value || "";
+    const last_name: string = lastName.current?.value || "";
+    const email: string = emailRef.current?.value || "";
+    const number: string = numberRef.current?.value || "";
+    const result: string = lastValue;
 
-    console.log(UserInfo);
-    setSuccess(true);
+    const { error } = await supabase
+      .from("DATA")
+      .insert([{ name, last_name, email, number, result }]);
+
+    if (error) {
+      console.log("Bad Request");
+
+      setSuccess(false);
+    } else {
+      setSuccess(true);
+    }
 
     nameRef.current!.value = "";
     lastName.current!.value = "";
