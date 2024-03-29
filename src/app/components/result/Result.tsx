@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import resultsData from "../../../data/results.json";
 import BtnComponent from "../button/btn-component";
-import Link from "next/link";
-import ModalForm from "../modal/ModalForm";
+import QuizHeader from "../quizheader/QuizHeader";
 import UnmutchingRes from "../unmatchingres/UnmutchingRes";
+import ModalForm from "../modal/ModalForm";
 import { useValuesContext } from "@/app/context/ValuesContext";
 import { Box, Typography } from "@mui/material";
 import {
@@ -19,7 +20,6 @@ import {
   resultMainContainer,
   buttons,
 } from "./resultStyles";
-import QuizHeader from "../quizheader/QuizHeader";
 
 const Result: React.FC = () => {
   const { attributes, setLastValue } = useValuesContext();

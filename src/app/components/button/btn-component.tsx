@@ -6,7 +6,13 @@ import { ButtonStyle, ButtonStyleOutlined } from "@/app/mainpage/HomePageStyle";
 import { IBtn } from "@/app/interfaces/interfaces";
 import { useRouter } from "next/navigation";
 
-const BtnComponent: React.FC<IBtn> = ({ text, href, checked, variant }) => {
+const BtnComponent: React.FC<IBtn> = ({
+  text,
+  href,
+  checked,
+  variant,
+  inputField,
+}) => {
   const router = useRouter();
 
   const startQuiz = () => {
@@ -34,13 +40,15 @@ const BtnComponent: React.FC<IBtn> = ({ text, href, checked, variant }) => {
         variant={"contained"}
         type="submit"
         sx={{
+          bgcolor: inputField ? "red" : "",
           opacity: !checked ? "0.5" : "1",
           "&:hover": {
             opacity: !checked ? "0.5" : "1",
+            bgcolor: inputField ? "red" : "",
           },
         }}
       >
-        {text}
+        {!inputField ? text : "შეავსეთ სრულად"}
       </ButtonStyle>
     </Box>
   );

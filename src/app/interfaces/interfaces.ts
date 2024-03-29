@@ -25,15 +25,17 @@ export interface ValuesContextType {
 // Button interface
 
 export interface IBtn {
-  text: string;
+  text: string | any;
   href?: string | undefined;
   checked?: boolean;
   variant?: string;
+  inputField?: boolean;
 }
 
-// useRequest Interface
+// QuizHeader Interface
 
-export interface UseRequestProps {
-  url: string;
-  method: string;
+export interface QuizHeaderProps {
+  value?: number | string;
+  checked?: boolean;
+  visible: boolean;
 }

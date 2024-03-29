@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, SxProps, styled } from "@mui/material";
+import { Box, SxProps, keyframes, styled } from "@mui/material";
 
 export const FixedPos: SxProps = {
   position: "fixed",
@@ -94,5 +94,25 @@ export const inputBox: SxProps = {
     ".inputField": {
       width: "100%",
     },
+  },
+};
+
+export const StarRotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const ButtonProps: SxProps = {
+  display: "flex",
+  alignItems: "center",
+  gap: "0.5rem",
+  color: "white",
+
+  svg: {
+    animation: `${StarRotate} 1s linear infinite`,
   },
 };

@@ -8,7 +8,6 @@ import Link from "next/link";
 import { BoxStyle } from "@/app/mainpage/HomePageStyle";
 import { Box, Typography } from "@mui/material";
 import { StarStyle, TextStyle, ContentStyle, ButtonForm } from "./StarterStyle";
-import { useValuesContext } from "@/app/context/ValuesContext";
 
 const Starter = () => {
   return (
