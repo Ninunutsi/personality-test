@@ -55,7 +55,7 @@ const Result: React.FC = () => {
   }, []);
 
   const matchingResult = resultsData.results.find(
-    (item) => item.title === result
+    (item) => item.proff === result
   );
 
   useEffect(() => {
@@ -104,9 +104,6 @@ const Result: React.FC = () => {
               <Box sx={{ textAlign: "center" }}>
                 <Typography sx={{ ...resultTextStyles }}>
                   {matchingResult.text}
-                </Typography>
-                <Typography sx={{ ...resultTextStyles }} mb={2}>
-                  მეტის სანახავად შეგიძლია ეწვიო:
                 </Typography>
               </Box>
             </Box>

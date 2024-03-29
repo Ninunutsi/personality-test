@@ -2,6 +2,7 @@
 
 export interface IOptions {
   answer: string;
+  proff: string;
   text: string;
   attributeVal: string;
   radioGif: string;

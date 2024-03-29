@@ -19,6 +19,7 @@ export const resultMainContainer: SxProps = {
 };
 
 export const resultTypographyStyles: SxProps = {
+  maxWidth: "1000px",
   color: "#FF9D9C",
   fontSize: "clamp(32px, 4vw, 80px)",
   lineHeight: "75px",
@@ -37,8 +38,10 @@ export const resultTypographyStyles: SxProps = {
 };
 
 export const resultTextStyles: SxProps = {
+  maxWidth: "1000px",
   color: "black",
   fontSize: "1.2rem",
+  marginBottom: "1rem",
 };
 
 export const resultBoxStyles: SxProps = {
