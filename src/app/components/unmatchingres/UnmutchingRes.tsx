@@ -13,6 +13,7 @@ const UnmutchingRes = () => {
       <Typography
         color={"black"}
         fontWeight={"bold"}
+        textAlign={"center"}
         sx={{
           fontSize: {
             xs: 16,

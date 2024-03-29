@@ -78,7 +78,6 @@ export const RadioInsideContent: SxProps = {
   position: "relative",
   zIndex: 0,
   img: {
-    objectFit: "cover",
     borderRadius: 2,
     width: "100%",
     height: 330,

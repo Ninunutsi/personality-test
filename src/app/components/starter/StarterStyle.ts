@@ -1,3 +1,5 @@
+"use client";
+
 import { SxProps, keyframes } from "@mui/material";
 
 export const StarRotate = keyframes`

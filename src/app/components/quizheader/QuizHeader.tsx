@@ -1,13 +1,10 @@
 import React from "react";
+import BtnComponent from "../button/btn-component";
 import { Box, Typography } from "@mui/material";
 import { QuizHeaderStyle } from "./QuizHeaderStyle";
-import BtnComponent from "../button/btn-component";
+import { QuizHeaderProps } from "@/app/interfaces/interfaces";
 
-const QuizHeader: React.FC<{
-  value?: number | string;
-  checked?: boolean;
-  visible: boolean;
-}> = ({ value, checked, visible }) => {
+const QuizHeader: React.FC<QuizHeaderProps> = ({ value, checked, visible }) => {
   return (
     <Box sx={{ ...QuizHeaderStyle }}>
       {value && (

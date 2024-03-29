@@ -27,6 +27,10 @@ export const resultTypographyStyles: SxProps = {
   textAlign: "center",
   letterSpacing: "1px",
 
+  "@media screen and (max-width: 1023px)": {
+    lineHeight: "50px",
+  },
+
   "@media screen and (max-width: 580px)": {
     borderRadius: 0,
   },

@@ -3,13 +3,11 @@
 import React, { ChangeEvent, useState, FormEvent, useEffect } from "react";
 import QuestionsData from "../../../data/data.json";
 import QuizHeader from "../quizheader/QuizHeader";
-import BtnComponent from "../button/btn-component";
 import { useRouter } from "next/navigation";
 import { QuestionProps } from "@/app/interfaces/interfaces";
 import { BoxStyle } from "@/app/mainpage/HomePageStyle";
-import { ButtonForm } from "../starter/StarterStyle";
 import { useValuesContext } from "@/app/context/ValuesContext";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   TestBox,
   RadioContent,
