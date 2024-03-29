@@ -21,7 +21,7 @@ export const resultMainContainer: SxProps = {
 export const resultTypographyStyles: SxProps = {
   maxWidth: "1000px",
   color: "#FF9D9C",
-  fontSize: "clamp(32px, 4vw, 80px)",
+  fontSize: "clamp(32px, 3.5vw, 70px)",
   lineHeight: "75px",
   fontWeight: "bold",
   width: "100%",

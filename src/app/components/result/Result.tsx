@@ -55,8 +55,10 @@ const Result: React.FC = () => {
   }, []);
 
   const matchingResult = resultsData.results.find(
-    (item) => item.proff === result
+    (item) => item.title === result
   );
+
+  console.log(matchingResult)
 
   useEffect(() => {
     if (!matchingResult) {
@@ -98,8 +100,8 @@ const Result: React.FC = () => {
                 ...BoxedContent,
               }}
             >
-              <Box maxWidth={570} height={{ md: 400, sm: 300, xs: 200 }}>
-                <img src={matchingResult.gif} alt="gif" />
+              <Box maxWidth={570} height={{ md: 400, sm: 300, xs: 200 }} >
+                <img src={matchingResult.gif} alt="gif"/>
               </Box>
               <Box sx={{ textAlign: "center" }}>
                 <Typography sx={{ ...resultTextStyles }}>

@@ -40,11 +40,11 @@ const BtnComponent: React.FC<IBtn> = ({
         variant={"contained"}
         type="submit"
         sx={{
-          bgcolor: inputField ? "red" : "",
+          bgcolor: inputField ? "#FF6B69" : "",
           opacity: !checked ? "0.5" : "1",
           "&:hover": {
             opacity: !checked ? "0.5" : "1",
-            bgcolor: inputField ? "red" : "",
+            bgcolor: inputField ? "#FF6B69" : "",
           },
         }}
       >

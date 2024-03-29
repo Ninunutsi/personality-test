@@ -6,32 +6,32 @@
       "options": [
         {
           "answer": "ძალიან ორგანიზებული",
-          "text": "გვშურს! ჩვენც გვასწავლე!",
-          "attributeVal": "PM",
+          "text": "გვშურს! ჩვენც გვასწავლე!",       
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question1/question1gif1.gif"
         },
         {
           "answer": "დეტალებზე ორიენტირებული",
           "text": "ესე იგი შენც გჯერა რომ ყველაფერი დეტალებშია?",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question1/question1gif2.gif"
         },
         {
           "answer": "შემოქმედი და გემოვნებიანი",
           "text": "ვინ ხარ ასეთი მოდური? ",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question1/question1gif3.webp"
         },
         {
           "answer": "ლოგიკურად მოაზროვნე",
           "text": "აბა რა, ყველა გზა ლოგიკამდე მიდის! ",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question1/question1gif4.webp"
         },
         {
           "answer": "მიზანდასახული და მშრომელი",
           "text": "შენც გჯერა, რომ შრომამ შექმნა ადამიანი? ",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question1/question1gif5.gif"
         }
       ]
@@ -43,31 +43,31 @@
         {
           "answer": "ირაკლი",
           "text": "დღეს დიდი დღეა, დიდი!",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question2/question2gif1.gif"
         },
         {
           "answer": "თამარი",
           "text": "მომიშალეთ ნერვები, რას შემოვდიოდი საერთოდ",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question2/question2gif2.gif"
         },
         {
           "answer": "ანაანო",
           "text": "ანაააანო!",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question2/question2gif3.gif"
         },
         {
           "answer": "დათო",
           "text": "აუ, ირააააა! ",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question2/question2gif4.gif"
         },
         {
           "answer": "სანდრო",
           "text": "მე ლონდონში ვსწავლობდი!",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question2/question2gif5.gif"
         }
       ]
@@ -79,31 +79,31 @@
         {
           "answer": "გერმანია",
           "text": "ჩემპიონატის ფინალურ ეტაპზე შენც მოდიხარ? 🥂",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question3/question3gif1.gif"
         },
         {
           "answer": "საფრანგეთი",
           "text": "I'm in Pariiiiis!",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question3/question3gif2.gif"
         },
         {
           "answer": "იაპონია",
           "text": "ჩვენც წაგვიყვანე!",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question3/question3gif3.gif"
         },
         {
           "answer": "აშშ",
           "text": "თავისუფლება ლომთა ხვედრიაა! ",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question3/question3gif4.gif"
         },
         {
           "answer": "შვეიცარია",
           "text": "კარგი გემოვნება გქონია, ვერაფერს ვიტყვით!  ",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question3/question3gif5.jpeg"
         }
       ]
@@ -115,31 +115,31 @@
         {
           "answer": "აჯაფსანდალი",
           "text": "ყველაფერი ქაოსშია, ყველაფერი გენიალურად არის?",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question4/question4gif1.jpeg"
         },
         {
           "answer": "სუში",
           "text": "საუკეთესო გადაწყვეტილებაა! ",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question4/question4gif2.gif"
         },
         {
           "answer": "ბელგიური ვაფლი",
           "text": "ერთი ბელგიური ვაფლით სიყვარულის გჯერა? ",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question4/question4gif3.gif"
         },
         {
           "answer": "კუბდარი",
           "text": "სვანეთში წასვლა მარტო ამისთვისაც ღირს!",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question4/question4gif4.avif"
         },
         {
           "answer": "ჩაქაფული",
           "text": "თან სეზონი მოდიის!",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question4/question4gif5.webp"
         }
       ]
@@ -151,31 +151,31 @@
         {
           "answer": "დაჭერობანა",
           "text": "წამს უკეთ იჭერ თუ მეგობრებს? 🤭",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question5/question5gif1.webp"
         },
         {
           "answer": "დამალობანა",
           "text": "და ისე, დამალობანას ეძახდი თუ დახუჭობანას? ",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question5/question5gif2.webp"
         },
         {
           "answer": "კლასობანა",
           "text": "სულ შენ იგებდი თუ უთმობდი სხვებსაც?",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question5/question5gif3.jpeg"
         },
         {
           "answer": "წრეში ბურთი",
           "text": "რამდენჯერაც ბურთი სახეში მოგხვედრია, იმდენი მილიონი რომ მოგცენ, გეყოფოდა?",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question5/question5gif4.gif"
         },
         {
           "answer": "სიმართლე და მოქმედება",
           "text": "და მაინც, სიმართლე თუ მოქმედება?",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question5/question5gif5.gif"
         }
       ]
@@ -187,31 +187,31 @@
         {
           "answer": "შავი",
           "text": "Black is always elegant!",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question6/question6gif1.webp"
         },
         {
           "answer": "წითელი",
           "text": "კარგი არჩევანია 🔥",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question6/question6gif2.webp"
         },
         {
           "answer": "თეთრი",
           "text": "ამ არჩევანს ნამდვილად ვერ დაგიწუნებთ! ",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question6/question6gif3.gif"
         },
         {
           "answer": "ყვითელი",
           "text": "აბა რა!",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question6/question6gif4.webp"
         },
         {
           "answer": "ყველა ზემოთ ჩამოთვლილი და არამხოლოდ",
           "text": "რაც მეტი ფერი, მით უკეთესი!",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question6/question6gif5.gif"
         }
       ]
@@ -223,31 +223,31 @@
         {
           "answer": "ხორუმი",
           "text": "რაც კარგია, ვერ დაგიკარგავთ! ",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question7/question7gif1.jpeg"
         },
         {
           "answer": "ქართული",
           "text": "ქართული ცეკვა და ქართული ანბანი ერთად უნდა ისწავლებოდეს!",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question7/question7gif2.gif"
         },
         {
           "answer": "სამაია",
           "text": "ამ ცეკვასავით დახვეწილი გემოვნება გქონია!",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question7/question7gif3.jpeg"
         },
         {
           "answer": "აჭარული",
           "text": "ჰოი და ნანი და ნანინა და ნანა...",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question7/question7gif4.gif"
         },
         {
           "answer": "მთიულური",
           "text": "ასააააა!",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question7/question7gif5.webp"
         }
       ]
@@ -259,31 +259,31 @@
         {
           "answer": "ჰარი",
           "text": "\"Working hard is important, but there is something that matters even more, believing in yourself\" - არ დაივიწყო!",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question8/question8gif1.webp"
         },
         {
           "answer": "ჰერმიონი",
           "text": "“I mean, it’s sort of exciting isn’t it? Breaking the rules.” ",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question8/question8gif2.webp"
         },
         {
           "answer": "რონი",
           "text": "Don't Let It Worry You!",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question8/question8gif3.webp"
         },
         {
           "answer": "პროფესორი სნეიპი",
           "text": "You Dare Use My Own Spells Against Me, Potter? ",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question8/question8gif4.webp"
         },
         {
           "answer": "პროფესორი მინერვა მაკგონაგალი",
           "text": "“Why is it when something happens, it is always you three?” ",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question8/question8gif5.gif"
         }
       ]
@@ -295,31 +295,31 @@
         {
           "answer": "ფილმს ვუყურებ",
           "text": "კაი ფილმი, კაია!",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question9/question9gif1.gif"
         },
         {
           "answer": "კომპიუტერულ თამაშებს ვთამაშობ",
           "text": "ძალიან ბევრ ღამესაც ნუ გაათენებ, არ ვარგა!",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question9/question9gif2.webp"
         },
         {
           "answer": "მეგობრებთან ერთად გართობას ვგეგმავ",
           "text": " გართობას ნამდვილად? ",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question9/question9gif3.webp"
         },
         {
           "answer": "ვხატავ, მუსიკას ვუსმენ ან კულტურულ ღონისძიებებს ვესწრები",
           "text": "ჰილინგის ოსტატი, who? ",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question9/question9gif4.webp"
         },
         {
           "answer": "უცხო ადგილებში ვსეირნობ",
           "text": "რა კარგი ჰობია, ხომ არ მოგვებაძა?",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question9/question9gif5.webp"
         }
       ]
@@ -331,31 +331,31 @@
         {
           "answer": "ოფისში ხალხმრავალ გარემოში",
           "text": "როცა შენი საყვარელი თანამშრომელი არ მოდის, შენც დეპრესია გეწყება? 🤧",
-          "attributeVal": "PM",
+          "attributeVal": "IT project manager",
           "radioGif": "/assets/GIFs/question10/question10gif1.webp"
         },
         {
           "answer": "სახლიდან დისტანციურად",
           "text": "თუ შენ მართლა მუშაობ? 🤭 ",
-          "attributeVal": "Backend",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question10/question10gif2.gif"
         },
         {
           "answer": "ფრილანსერად, მოქნილი გრაფიკით",
           "text": "საუკეთესო არჩევანი! 🏝 ",
-          "attributeVal": "UI/UX&Graphic Design",
+          "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question10/question10gif3.webp"
         },
         {
           "answer": "დისტანციურად მირჩევნია, მარა ოფისშიც არაუშავს",
           "text": "ოფისსაც გააჩნია 🤭 ",
-          "attributeVal": "Frontend/ნებისმიერი",
+          "attributeVal": "Frontend დეველოპერი",
           "radioGif": "/assets/GIFs/question10/question10gif4.webp"
         },
         {
           "answer": "როგორც საქმე მოითხოვს, მთავარია შედეგი",
           "text": "ოფისის მეგობარს არაფერი ჯობია! 🥳",
-          "attributeVal": "QA",
+          "attributeVal": "ციფრული პროდუქტების ტესტირება",
           "radioGif": "/assets/GIFs/question10/question10gif5.webp"
         }
       ]
