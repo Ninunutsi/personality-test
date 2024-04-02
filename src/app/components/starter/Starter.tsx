@@ -8,7 +8,7 @@ import Link from "next/link";
 import { BoxStyle } from "@/app/mainpage/HomePageStyle";
 import { Box, Typography } from "@mui/material";
 import { StarStyle, TextStyle, ContentStyle, ButtonForm } from "./StarterStyle";
-
+import airpods from '../../../../public/assets/airpods.png'
 const Starter = () => {
   return (
     <BoxStyle component="main">
@@ -22,6 +22,7 @@ const Starter = () => {
           Quiz
         </Typography>
       </Box>
+      <Box sx={{display: 'flex', alignItems: 'flex-start'}}>
       <Box sx={{ ...ContentStyle }}>
         <Image
           src={"assets/skillwillLogo.svg"}
@@ -58,11 +59,18 @@ const Starter = () => {
         >
           შეავსე კითხვარი, მიიღე გათამაშებაში მონაწილეობა და მოიგე Airpods
         </Typography>
-        <Box alignSelf={"end"} component="form" sx={{ ...ButtonForm }}>
+        <Box alignSelf={"start"} component="form" sx={{ ...ButtonForm }}>
           <Link href={"/test"}>
             <BtnComponent text="დაიწყე ტესტი" checked={true} />
           </Link>
         </Box>
+      </Box>
+      <Image
+          src={airpods}
+          width={300}
+          height={200}
+          alt="skillwill logo"
+        />
       </Box>
     </BoxStyle>
   );
