@@ -1,4 +1,4 @@
-import { SxProps } from "@mui/system";
+import { SxProps } from "@mui/material";
 
 export const GifText: SxProps = {
   textAlign: "center",
@@ -126,7 +126,7 @@ export const BoxedContent: SxProps = {
 export const buttons: SxProps = {
   display: "flex",
   alignItems: "center",
-  justifyContent: 'center',
+  justifyContent: "center",
   gap: "1rem",
 
   a: {

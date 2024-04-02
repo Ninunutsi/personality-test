@@ -43,9 +43,9 @@ export const ContentStyle: SxProps = {
 
   "@media (max-width: 900px)": {
     alignItems: "center",
-    justifyContent: 'center',
+    justifyContent: "center",
     textAlign: "center",
-    width:'100%',
+    width: "100%",
     padding: "0 30px 30px",
   },
 

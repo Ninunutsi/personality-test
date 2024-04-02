@@ -42,7 +42,7 @@ body.scollhide {
   }
 }
 
-.parent[data-isOpen="true"]{
+.parent[data-isOpen="true"] {
   width: 400px;
   height: 200px;
   border: 1px solid green;

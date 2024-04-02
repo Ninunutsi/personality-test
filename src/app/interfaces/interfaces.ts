@@ -20,7 +20,7 @@ export interface ValuesContextType {
   setAttributes: React.Dispatch<React.SetStateAction<string[]>>;
   lastValue: string;
   setLastValue: React.Dispatch<React.SetStateAction<string>>;
-  showModal: boolean
+  showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 

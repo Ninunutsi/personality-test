@@ -14,7 +14,14 @@ export const ValuesProvider: React.FC<{ children: ReactNode }> = ({
 
   return (
     <ValContext.Provider
-      value={{ attributes, setAttributes, lastValue, setLastValue, showModal, setShowModal }}
+      value={{
+        attributes,
+        setAttributes,
+        lastValue,
+        setLastValue,
+        showModal,
+        setShowModal,
+      }}
     >
       {children}
     </ValContext.Provider>

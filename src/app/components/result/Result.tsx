@@ -1,14 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useValuesContext } from "@/app/context/ValuesContext";
+import { Box, Typography } from "@mui/material";
+import Link from "next/link";
 import resultsData from "../../../data/results.json";
 import BtnComponent from "../button/btn-component";
 import QuizHeader from "../quizheader/QuizHeader";
 import UnmutchingRes from "../unmatchingres/UnmutchingRes";
 import ModalForm from "../modal/ModalForm";
-import { useValuesContext } from "@/app/context/ValuesContext";
-import { Box, Typography } from "@mui/material";
 import {
   resultTypographyStyles,
   resultTextStyles,
@@ -22,7 +22,8 @@ import {
 } from "./resultStyles";
 
 const Result: React.FC = () => {
-  const { attributes, setLastValue, showModal, setShowModal } = useValuesContext();
+  const { attributes, setLastValue, showModal, setShowModal } =
+    useValuesContext();
   const [result, setResult] = useState<string>("");
   const [wait, setWait] = useState<boolean>(false);
 
@@ -57,7 +58,7 @@ const Result: React.FC = () => {
     (item) => item.title === result
   );
 
-  console.log(matchingResult)
+  console.log(matchingResult);
 
   useEffect(() => {
     if (!matchingResult) {
@@ -99,8 +100,8 @@ const Result: React.FC = () => {
                 ...BoxedContent,
               }}
             >
-              <Box maxWidth={570} height={{ md: 400, sm: 300, xs: 200 }} >
-                <img src={matchingResult.gif} alt="gif"/>
+              <Box maxWidth={570} height={{ md: 400, sm: 300, xs: 200 }}>
+                <img src={matchingResult.gif} alt="gif" />
               </Box>
               <Box sx={{ textAlign: "center" }}>
                 <Typography sx={{ ...resultTextStyles }}>

@@ -8,6 +8,7 @@ import { QuestionProps } from "@/app/interfaces/interfaces";
 import { BoxStyle } from "@/app/mainpage/HomePageStyle";
 import { useValuesContext } from "@/app/context/ValuesContext";
 import { motion } from "framer-motion";
+import { GifText } from "../result/resultStyles";
 import {
   TestBox,
   RadioContent,
@@ -20,10 +21,8 @@ import {
   RadioGroup,
   Typography,
 } from "@mui/material";
-import { GifText } from "../result/resultStyles";
 
 const QuestionForm = () => {
-  const { attributes, setAttributes } = useValuesContext();
   const [data] = useState(QuestionsData);
   const [questionsIndex, setQuestionsIndex] = useState<number>(0);
   const [questIndex, setQuestIndex] = useState<number>(1);
@@ -32,6 +31,7 @@ const QuestionForm = () => {
   const [radioText, setRadioText] = useState<string>("");
   const [radioGif, setRadioGif] = useState<string>("");
 
+  const { attributes, setAttributes } = useValuesContext();
   const router = useRouter();
 
   const questions: QuestionProps[] = data.questions;
