@@ -42,7 +42,7 @@ const Starter = () => {
             },
           }}
         >
-          რომელი პროფესიაა შენთვის განკუთვნილი?
+          გაიგე რომელი პროფესია შეგეფერება
         </Typography>
         <Typography
           maxWidth={{ xs: "100%", sm: 300, md: 500 }}
@@ -56,8 +56,7 @@ const Starter = () => {
           }}
           mb={8}
         >
-          გინდა ისწავლო რაც მართლა გამოგადგება, მაგრამ არ იცი საიდან დაიწყო?
-          მაშინ
+          შეავსე კითხვარი, მიიღე გათამაშებაში მონაწილეობა და მოიგე Airpods
         </Typography>
         <Box alignSelf={"end"} component="form" sx={{ ...ButtonForm }}>
           <Link href={"/test"}>

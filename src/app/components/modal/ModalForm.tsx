@@ -118,11 +118,11 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           onSubmit={handleSubmit}
         >
           <Box className="title">
-            <Typography mb={1} variant="h5">
-              პერსონალური მონაცემები
+            <Typography mb={1.5} variant="h5">
+            შეიყვანე პირადი მონაცემები და დაელოდე გათამაშებას.
             </Typography>
             <Typography mb={1} variant="h6">
-              შეიყვანეთ თქვენი მონაცემები
+            გამარჯვებული გამოვლინდება 19 აპრილს.
             </Typography>
           </Box>
           <Box className="namesInput">

@@ -35,6 +35,7 @@ export const ButtonStyle = styled(Button)({
   backgroundColor: "#ab7df4",
   fontSize: "1.25rem",
   padding: "10px 65px",
+  width: '100%',
 
   "&:hover": {
     backgroundColor: "#ab7df4",

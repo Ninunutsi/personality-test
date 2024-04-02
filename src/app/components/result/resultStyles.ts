@@ -126,11 +126,12 @@ export const BoxedContent: SxProps = {
 export const buttons: SxProps = {
   display: "flex",
   alignItems: "center",
+  justifyContent: 'center',
   gap: "1rem",
 
   a: {
     color: "#ffffff",
-    width: "100%",
+    width: "350px",
     display: "block",
   },
 

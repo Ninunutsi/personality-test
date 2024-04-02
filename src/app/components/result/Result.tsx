@@ -117,7 +117,7 @@ const Result: React.FC = () => {
               </Link>
               <Box onClick={onClick}>
                 <BtnComponent
-                  text="შემდეგი"
+                  text="მოიგე Airpods"
                   checked={true}
                   variant={"outlined"}
                 />
