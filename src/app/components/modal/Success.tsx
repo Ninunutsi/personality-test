@@ -1,10 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import BtnComponent from "../button/btn-component";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { FixedPos, SuccessStyle } from "./ModalFormStyle";
+import { useValuesContext } from "@/app/context/ValuesContext";
 
 const Success = () => {
+  const { setShowModal } = useValuesContext();
+
+  const handleClose = () =>{
+    setShowModal(false)
+  }
+
   return (
     <SuccessStyle sx={{ ...FixedPos }} color="white">
       <Image src="./assets/success.svg" alt="success" width={75} height={75} />
@@ -14,7 +21,7 @@ const Success = () => {
       <Typography variant="body1" width={"90%"} textAlign={"center"} mb={5}>
       გამარჯვებული გამოვლინდება 19 აპრილს
       </Typography>
-      <BtnComponent text="დახურვა" checked={true} href="/" />
+      <Box onClick={handleClose}><BtnComponent text="დახურვა" checked={true}/></Box>
     </SuccessStyle>
   );
 };

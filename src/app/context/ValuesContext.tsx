@@ -10,10 +10,11 @@ export const ValuesProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [attributes, setAttributes] = useState<string[]>([]);
   const [lastValue, setLastValue] = useState<string>("");
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
     <ValContext.Provider
-      value={{ attributes, setAttributes, lastValue, setLastValue }}
+      value={{ attributes, setAttributes, lastValue, setLastValue, showModal, setShowModal }}
     >
       {children}
     </ValContext.Provider>

@@ -22,9 +22,8 @@ import {
 } from "./resultStyles";
 
 const Result: React.FC = () => {
-  const { attributes, setLastValue } = useValuesContext();
+  const { attributes, setLastValue, showModal, setShowModal } = useValuesContext();
   const [result, setResult] = useState<string>("");
-  const [showModal, setShowModal] = useState<boolean>(false);
   const [wait, setWait] = useState<boolean>(false);
 
   useEffect(() => {

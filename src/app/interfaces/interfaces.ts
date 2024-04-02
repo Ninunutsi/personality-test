@@ -20,6 +20,8 @@ export interface ValuesContextType {
   setAttributes: React.Dispatch<React.SetStateAction<string[]>>;
   lastValue: string;
   setLastValue: React.Dispatch<React.SetStateAction<string>>;
+  showModal: boolean
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // Button interface

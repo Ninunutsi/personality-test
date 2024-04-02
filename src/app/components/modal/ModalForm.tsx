@@ -97,7 +97,6 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const closeOverlay = () => {
     if (success) {
       onClose();
-      router.push("/");
     } else {
       onClose();
     }
