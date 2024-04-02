@@ -22,7 +22,7 @@ const Starter = () => {
           Quiz
         </Typography>
       </Box>
-      <Box sx={{display: 'flex', alignItems: 'flex-start'}}>
+      <Box sx={{display: 'flex', width: '100%',alignItems: { xs: "center", sm: "center", md: "center", lg: 'flex-start' }}}>
       <Box sx={{ ...ContentStyle }}>
         <Image
           src={"assets/skillwillLogo.svg"}
@@ -65,12 +65,16 @@ const Starter = () => {
           </Link>
         </Box>
       </Box>
-      <Image
-          src={airpods}
-          width={300}
-          height={200}
-          alt="skillwill logo"
-        />
+      <Box sx={{
+           display: { xs: "none", sm: "none", md: "none", lg: 'block' } 
+        }}>
+          <Image
+            src={airpods}
+            width={300}
+            height={200}
+            alt="skillwill logo"
+          />
+        </Box>
       </Box>
     </BoxStyle>
   );
