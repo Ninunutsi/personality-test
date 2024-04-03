@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { ButtonStyle, ButtonStyleOutlined } from "@/app/mainpage/HomePageStyle";
 import { IBtn } from "@/app/interfaces/interfaces";
 import { useRouter } from "next/navigation";
@@ -12,6 +12,7 @@ const BtnComponent: React.FC<IBtn> = ({
   checked,
   variant,
   inputField,
+  backColor,
 }) => {
   const router = useRouter();
 
@@ -40,11 +41,12 @@ const BtnComponent: React.FC<IBtn> = ({
         variant={"contained"}
         type="submit"
         sx={{
-          bgcolor: inputField ? "#FF6B69" : "",
-          opacity: !checked ? "0.5" : "1",
+          bgcolor: inputField ? "#FF6B69" : backColor,
+          color: backColor ? "#000" : "#fff",
+          opacity: !checked ? "0.8" : "1",
           "&:hover": {
-            opacity: !checked ? "0.5" : "1",
-            bgcolor: inputField ? "#FF6B69" : "",
+            opacity: !checked ? "0.8" : "1",
+            bgcolor: inputField ? "#FF6B69" : backColor,
           },
         }}
       >

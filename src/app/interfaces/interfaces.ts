@@ -32,6 +32,7 @@ export interface IBtn {
   checked?: boolean;
   variant?: string;
   inputField?: boolean;
+  backColor?: string;
 }
 
 // QuizHeader Interface

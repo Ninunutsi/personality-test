@@ -51,44 +51,11 @@ export const resultBoxStyles: SxProps = {
   width: "100%",
   color: "black",
   flexDirection: "column",
-  // gap: "2rem",
   backgroundColor: "white",
   borderRadius: "0.5rem",
 
   "@media screen and (max-width: 580px)": {
     borderRadius: 0,
-  },
-};
-
-export const textTypography: SxProps = {
-  margin: "3rem 0 0.5rem",
-  fontSize: 26,
-  fontWeight: "bold",
-  textAlign: "center",
-
-  "@media screen and (max-width: 580px)": {
-    fontSize: 20,
-  },
-};
-
-export const resultLinkContainerStyles: SxProps = {
-  width: "100%",
-  margin: "1rem 0",
-  backgroundColor: "#ab7df4",
-  borderRadius: "4px",
-  padding: "23px 79px",
-  minWidth: "64px",
-  boxShadow:
-    "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
-  textAlign: "center",
-  fontWeight: 500,
-  fontSize: "1.25rem",
-  "&:hover": {
-    animation: "none",
-  },
-  "@media (max-width: 768px) ": {
-    padding: "24px 40px",
-    fontSize: "1.3rem",
   },
 };
 
@@ -129,14 +96,12 @@ export const buttons: SxProps = {
   justifyContent: "center",
   gap: "1rem",
 
-  a: {
-    color: "#ffffff",
-    width: "350px",
-    display: "block",
-  },
-
-  "@media screen and (max-width: 580px)": {
+  "@media screen and (max-width: 760px)": {
     flexDirection: "column",
+
+    a: {
+      width: "100%",
+    },
 
     width: "100%",
     padding: "0.5rem",

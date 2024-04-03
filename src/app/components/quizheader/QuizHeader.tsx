@@ -21,7 +21,7 @@ const QuizHeader: React.FC<QuizHeaderProps> = ({ value, checked, visible }) => {
           gap={1.5}
           alignItems={"center"}
         >
-          Question {value}
+          კითხვა {value}
           <Typography
             fontWeight={700}
             component="span"
@@ -39,7 +39,11 @@ const QuizHeader: React.FC<QuizHeaderProps> = ({ value, checked, visible }) => {
       )}
       {visible && (
         <Box mr={{ md: 1, xs: 0, sm: 2 }} textAlign={"end"}>
-          <BtnComponent text="შემდეგი" checked={checked} />
+          <BtnComponent
+            text="შემდეგი"
+            checked={checked}
+            backColor={"#f8f8f8"}
+          />
         </Box>
       )}
       {!value && (
@@ -53,7 +57,7 @@ const QuizHeader: React.FC<QuizHeaderProps> = ({ value, checked, visible }) => {
             },
           }}
         >
-          SKILLWILL QUIZ
+          SKILLWILL SORTING HAT
         </Typography>
       )}
     </Box>

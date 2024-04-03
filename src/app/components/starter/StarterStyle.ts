@@ -11,34 +11,49 @@ export const StarRotate = keyframes`
   }
 `;
 
-export const StarStyle: SxProps = {
-  backgroundImage: `url("/assets/star.png")`,
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  width: 200,
-  height: 200,
-  animation: `${StarRotate} 10s linear infinite`,
+export const ContentBox: SxProps = {
+  display: "flex",
+  justifyContent: "center",
+  gap: 4,
+  width: "100%",
+  marginTop: "25px",
+  padding: "0 64px 64px",
 
   "@media (max-width: 1024px)": {
-    alignSelf: "center",
+    flexDirection: "column-reverse",
+    gap: "20px",
+    padding: "0 20px 20px",
+    textAlign: "center",
   },
 };
 
-export const TextStyle: SxProps = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  fontWeight: 700,
+export const TextContent: SxProps = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+
+  ".Airpods": {
+    span: {
+      display: "inline-block",
+      fontSize: "24px",
+      fontWeight: 700,
+
+      "@media (max-width:900px)": {
+        fontSize: "18px",
+      },
+    },
+  },
+
+  "@media (max-width: 900px)": {
+    flexDirection: "column",
+    gap: "10px",
+  },
 };
 
 export const ContentStyle: SxProps = {
-  width: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "start",
-  padding: "0 64px 64px",
   color: "black",
 
   "@media (max-width: 900px)": {

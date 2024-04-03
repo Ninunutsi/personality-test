@@ -4,7 +4,7 @@ export const QuizHeaderStyle: SxProps = {
   borderBottom: "3px solid black",
   width: "100%",
   padding: "30px 64px",
-  backgroundColor: "#7DC0A7",
+  backgroundColor: "#c4aaf4",
 
   display: "flex",
   alignItems: "center",

@@ -12,11 +12,9 @@ import ModalForm from "../modal/ModalForm";
 import {
   resultTypographyStyles,
   resultTextStyles,
-  resultLinkContainerStyles,
   resultBoxStyles,
   BoxContainerStyles,
   BoxedContent,
-  textTypography,
   resultMainContainer,
   buttons,
 } from "./resultStyles";
@@ -43,9 +41,9 @@ const Result: React.FC = () => {
         equalCounts = true;
       }
     });
-    const random = Math.floor(Math.random() * 10) + 1;
 
     if (equalCounts) {
+      const random = Math.floor(Math.random() * 10) + 1;
       setResult(attributes[random]);
       setLastValue(attributes[random]);
     } else {
@@ -57,8 +55,6 @@ const Result: React.FC = () => {
   const matchingResult = resultsData.results.find(
     (item) => item.title === result
   );
-
-  console.log(matchingResult);
 
   useEffect(() => {
     if (!matchingResult) {
@@ -87,19 +83,27 @@ const Result: React.FC = () => {
           }}
         >
           <QuizHeader value={10} visible={false} />
-          <Box sx={{ ...resultBoxStyles }} pb={"1rem"}>
-            <Typography sx={{ ...textTypography }}>
-              რომელი პროფესიაა შენთვის განკუთვნილი?
-            </Typography>
+          <Box sx={{ ...resultBoxStyles }} pb={"1rem"} pt={2}>
             <Typography sx={{ ...resultTypographyStyles }} pb={4}>
-              გილოცავ! <br />
-              შენ შეგეფერება {result}
+              გილოცავ! შენ შეგეფერება {result}
             </Typography>
             <Box
               sx={{
                 ...BoxedContent,
               }}
             >
+              <Box sx={{ ...buttons }}>
+                <Link href={matchingResult?.link} target="_blank">
+                  <BtnComponent text={"იყიდე კურსი"} />
+                </Link>
+                <Box onClick={onClick}>
+                  <BtnComponent
+                    text="მოიგე Airpods"
+                    checked={true}
+                    variant={"outlined"}
+                  />
+                </Box>
+              </Box>
               <Box maxWidth={570} height={{ md: 400, sm: 300, xs: 200 }}>
                 <img src={matchingResult.gif} alt="gif" />
               </Box>
@@ -107,20 +111,6 @@ const Result: React.FC = () => {
                 <Typography sx={{ ...resultTextStyles }}>
                   {matchingResult.text}
                 </Typography>
-              </Box>
-            </Box>
-            <Box sx={{ ...buttons }}>
-              <Link href={matchingResult?.link} target="_blank">
-                <Typography sx={{ ...resultLinkContainerStyles }}>
-                  იყიდე კურსი
-                </Typography>
-              </Link>
-              <Box onClick={onClick}>
-                <BtnComponent
-                  text="მოიგე Airpods"
-                  checked={true}
-                  variant={"outlined"}
-                />
               </Box>
             </Box>
           </Box>

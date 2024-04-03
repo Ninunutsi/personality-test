@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import QuizHeader from "../quizheader/QuizHeader";
 import BtnComponent from "../button/btn-component";
 import Image from "next/image";
@@ -8,81 +8,94 @@ import Link from "next/link";
 import airpods from "../../../../public/assets/airpods.png";
 import { BoxStyle } from "@/app/mainpage/HomePageStyle";
 import { Box, Typography } from "@mui/material";
-import { StarStyle, TextStyle, ContentStyle, ButtonForm } from "./StarterStyle";
+import {
+  TextContent,
+  ContentBox,
+  ContentStyle,
+  ButtonForm,
+} from "./StarterStyle";
+import { useValuesContext } from "@/app/context/ValuesContext";
 
 const Starter = () => {
+  const { setAttributes } = useValuesContext();
+
+  useEffect(() => {
+    setAttributes([]);
+  }, []);
+
   return (
     <BoxStyle component="main">
       <QuizHeader visible={false} />
       <Box
-        position={"relative"}
-        sx={{ alignSelf: { xs: "center", sm: "center", md: "start" } }}
-      >
-        <Box sx={{ ...StarStyle }} position={"relative"}></Box>
-        <Typography variant="h6" sx={{ ...TextStyle }}>
-          Quiz
-        </Typography>
-      </Box>
-      <Box
         sx={{
-          display: "flex",
-          width: "100%",
           alignItems: {
             xs: "center",
-            sm: "center",
-            md: "center",
             lg: "flex-start",
           },
+          ...ContentBox,
         }}
       >
         <Box sx={{ ...ContentStyle }}>
-          <Image
-            src={"assets/skillwillLogo.svg"}
-            width={160}
-            height={20}
-            alt="skillwill logo"
-          />
           <Typography
-            maxWidth={{ xs: "100%", sm: 500, md: 930 }}
+            maxWidth={{ xs: "100%", sm: 500, md: 560 }}
             fontWeight={700}
-            mt={2}
-            mb={3}
+            mb={2}
             sx={{
               fontSize: {
                 xs: "h6.fontSize",
                 sm: "h5.fontSize",
-                md: "h3.fontSize",
+                md: "h4.fontSize",
+                lg: "h3.fontSize",
               },
             }}
           >
             გაიგე რომელი პროფესია შეგეფერება
           </Typography>
-          <Typography
-            maxWidth={{ xs: "100%", sm: 300, md: 500 }}
-            fontWeight={700}
-            sx={{
-              fontSize: {
-                xs: "body1.fontSize",
-                sm: "body1.fontSize",
-                md: "h6.fontSize",
-              },
-            }}
-            mb={8}
+          <Box
+            mb={2}
+            sx={{ ...TextContent }}
+            maxWidth={{ xs: "100%", sm: "100%", md: 550 }}
           >
-            შეავსე კითხვარი, მიიღე გათამაშებაში მონაწილეობა და მოიგე Airpods
-          </Typography>
+            <Typography
+              className="Airpods"
+              fontWeight={700}
+              sx={{
+                fontSize: {
+                  xs: "body1.fontSize",
+                  sm: "body1.fontSize",
+                  md: "h6.fontSize",
+                },
+              }}
+            >
+              შეავსე კითხვარი, მიიღე გათამაშებაში მონაწილეობა და მოიგე
+              <span>&nbsp;Airpods</span>
+            </Typography>
+            <Box display={{ lg: "block", md: "none", sm: "none", xs: "none" }}>
+              <Image
+                src={airpods}
+                width={180}
+                height={120}
+                alt="skillwill logo"
+              />
+            </Box>
+          </Box>
           <Box alignSelf={"start"} component="form" sx={{ ...ButtonForm }}>
             <Link href={"/test"}>
-              <BtnComponent text="დაიწყე ტესტი" checked={true} />
+              <BtnComponent text="დაიწყე ქვიზი" checked={true} />
             </Link>
           </Box>
         </Box>
         <Box
-          sx={{
-            display: { xs: "none", sm: "none", md: "none", lg: "block" },
-          }}
+          maxWidth={{ lg: "40%", md: "100%", sm: "100%", xs: "100%" }}
+          height={{ lg: 250, md: 240, sm: 200, xs: 150 }}
+          mt={2}
         >
-          <Image src={airpods} width={300} height={200} alt="skillwill logo" />
+          <img
+            src="/assets/GIFs/mainGif.webp"
+            alt="mainGif"
+            width="100%"
+            height="100%"
+          />
         </Box>
       </Box>
     </BoxStyle>

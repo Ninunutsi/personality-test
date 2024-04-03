@@ -21,13 +21,19 @@ export const BoxStyle = styled(Box)({
 
 export const ButtonStyleOutlined = styled(Button)({
   fontSize: "1.25rem",
-  padding: "20px 79px",
+  padding: "10px 65px",
   color: "#ab7df4",
+  width: "100%",
   border: "1px solid #ab7df4",
 
   "&:hover": {
     backgroundColor: "#fcfaff",
     border: "1px solid #ab7df4",
+  },
+
+  "@media (max-width: 1024px) ": {
+    padding: "10px 20px",
+    fontSize: "1rem",
   },
 });
 
@@ -41,8 +47,8 @@ export const ButtonStyle = styled(Button)({
     backgroundColor: "#ab7df4",
   },
 
-  "@media (max-width: 768px) ": {
-    padding: "10px 30px",
+  "@media (max-width: 1024px) ": {
+    padding: "10px 20px",
     fontSize: "1rem",
   },
 });
