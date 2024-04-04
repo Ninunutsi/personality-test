@@ -1,6 +1,12 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 import { ValuesContextType } from "../interfaces/interfaces";
 
 const ValContext = createContext<ValuesContextType | undefined>(undefined);
@@ -11,6 +17,21 @@ export const ValuesProvider: React.FC<{ children: ReactNode }> = ({
   const [attributes, setAttributes] = useState<string[]>([]);
   const [lastValue, setLastValue] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [showClose, setShowClose] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      window.innerWidth < 600 ? setShowClose(true) : setShowClose(false);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (showModal) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "auto";
+    }
+  }, [showModal]);
 
   return (
     <ValContext.Provider
@@ -21,6 +42,8 @@ export const ValuesProvider: React.FC<{ children: ReactNode }> = ({
         setLastValue,
         showModal,
         setShowModal,
+        showClose,
+        setShowClose,
       }}
     >
       {children}

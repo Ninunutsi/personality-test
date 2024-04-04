@@ -17,17 +17,19 @@ export const TestBox: SxProps = {
     fontWeight: 700,
     color: "#000",
     marginBottom: "35px",
-    maxWidth: 750,
+    maxWidth: 700,
     textAlign: "center",
 
     "@media (max-width: 900px)": {
       height: "auto",
-      fontSize: 26,
+      fontSize: 24,
     },
 
     "@media (max-width: 768px)": {
-      fontSize: 21,
+      fontSize: 18,
       marginBottom: "20px",
+      textAlign: "start",
+      marginLeft: "10px",
     },
   },
 

@@ -5,11 +5,11 @@ import { Box, TextField, Typography } from "@mui/material";
 import { ModalFormBox, Overlay, FixedPos, ButtonProps } from "./ModalFormStyle";
 import { useValuesContext } from "@/app/context/ValuesContext";
 import { createClient } from "@supabase/supabase-js";
-import { useRouter } from "next/navigation";
 import { supabaseKey, supabaseUrl } from "@/api/Api";
 import BtnComponent from "../button/btn-component";
 import Success from "./Success";
 import RefreshIcon from "@mui/icons-material/Refresh";
+import CloseIcon from "@mui/icons-material/Close";
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -22,9 +22,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [inputField, setInputField] = useState<boolean>(false);
-  const { lastValue } = useValuesContext();
-
-  const router = useRouter();
+  const { lastValue, showClose } = useValuesContext();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (
@@ -81,12 +79,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
     setLoading(false);
 
-    if (error) {
-      console.log("Bad Request");
-      setSuccess(false);
-    } else {
-      setSuccess(true);
-    }
+    error ? setSuccess(false) : setSuccess(true);
 
     if (nameRef.current) nameRef.current.value = "";
     if (lastNameRef.current) lastNameRef.current.value = "";
@@ -94,12 +87,8 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     if (numberRef.current) numberRef.current.value = "";
   };
 
-  const closeOverlay = () => {
-    if (success) {
-      onClose();
-    } else {
-      onClose();
-    }
+  const closeModal = () => {
+    success ? onClose() : onClose();
   };
 
   return (
@@ -116,6 +105,11 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           component="form"
           onSubmit={handleSubmit}
         >
+          {showClose && (
+            <Box alignSelf={"end"} onClick={closeModal}>
+              <CloseIcon />
+            </Box>
+          )}
           <Box className="title">
             <Typography mb={1.5} variant="h5">
               შეიყვანე პირადი მონაცემები და დაელოდე გათამაშებას.
@@ -176,7 +170,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           </Box>
         </ModalFormBox>
       )}
-      <Overlay onClick={closeOverlay}></Overlay>
+      <Overlay onClick={closeModal}></Overlay>
     </Box>
   );
 };

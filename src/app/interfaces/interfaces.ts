@@ -22,6 +22,8 @@ export interface ValuesContextType {
   setLastValue: React.Dispatch<React.SetStateAction<string>>;
   showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  showClose: boolean;
+  setShowClose: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // Button interface

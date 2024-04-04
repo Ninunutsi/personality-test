@@ -84,7 +84,7 @@ const Result: React.FC = () => {
         >
           <QuizHeader value={10} visible={false} />
           <Box sx={{ ...resultBoxStyles }} pb={"1rem"} pt={2}>
-            <Typography sx={{ ...resultTypographyStyles }} pb={4}>
+            <Typography sx={{ ...resultTypographyStyles }} >
               გილოცავ! შენ შეგეფერება {result}
             </Typography>
             <Box
@@ -104,7 +104,11 @@ const Result: React.FC = () => {
                   />
                 </Box>
               </Box>
-              <Box maxWidth={570} height={{ md: 400, sm: 300, xs: 200 }}>
+              <Box
+                maxWidth={570}
+                width={"100%"}
+                height={{ md: 400, sm: 300, xs: 200 }}
+              >
                 <img src={matchingResult.gif} alt="gif" />
               </Box>
               <Box sx={{ textAlign: "center" }}>

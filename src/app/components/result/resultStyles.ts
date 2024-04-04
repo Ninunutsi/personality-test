@@ -21,27 +21,35 @@ export const resultMainContainer: SxProps = {
 export const resultTypographyStyles: SxProps = {
   maxWidth: "1000px",
   color: "#FF9D9C",
-  fontSize: "clamp(32px, 3.5vw, 70px)",
+  fontSize: "clamp(28px, 4vw, 70px)",
   lineHeight: "75px",
   fontWeight: "bold",
   width: "100%",
   textAlign: "center",
   letterSpacing: "1px",
+  paddingBottom: "1.5rem",
 
   "@media screen and (max-width: 1023px)": {
     lineHeight: "50px",
+    paddingBottom: "1rem",
   },
 
   "@media screen and (max-width: 580px)": {
     borderRadius: 0,
+    paddingBottom: "0.6rem",
   },
 };
 
 export const resultTextStyles: SxProps = {
-  maxWidth: "1000px",
+  maxWidth: "800px",
   color: "black",
   fontSize: "1.2rem",
   marginBottom: "1rem",
+
+  "@media (max-width:600px)": {
+    fontSize: "0.8rem",
+    marginBottom: "0.5rem",
+  },
 };
 
 export const resultBoxStyles: SxProps = {
@@ -56,6 +64,7 @@ export const resultBoxStyles: SxProps = {
 
   "@media screen and (max-width: 580px)": {
     borderRadius: 0,
+    padding: "5px",
   },
 };
 
@@ -87,6 +96,7 @@ export const BoxedContent: SxProps = {
 
   "@media screen and (max-width: 768px)": {
     flexDirection: "column",
+    gap: "1rem",
   },
 };
 
