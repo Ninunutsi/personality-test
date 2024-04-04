@@ -259,31 +259,31 @@
         {
           "answer": "ჰარი",
           "text": "\"Working hard is important, but there is something that matters even more, believing in yourself\" - არ დაივიწყო!",
-          "attributeVal": "Backend დეველოპერი",
-          "radioGif": "/assets/GIFs/question8/question8gif1.webp"
+          "attributeVal": "Frontend დეველოპერი",
+          "radioGif": "/assets/GIFs/question8/question8gif1.gif"
         },
         {
           "answer": "ჰერმიონი",
           "text": "“I mean, it’s sort of exciting isn’t it? Breaking the rules.” ",
           "attributeVal": "IT project manager",
-          "radioGif": "/assets/GIFs/question8/question8gif2.webp"
+          "radioGif": "/assets/GIFs/question8/question8gif2.gif"
         },
         {
           "answer": "რონი",
           "text": "Don't Let It Worry You!",
-          "attributeVal": "Frontend დეველოპერი",
-          "radioGif": "/assets/GIFs/question8/question8gif3.webp"
-        },
-        {
-          "answer": "პროფესორი სნეიპი",
-          "text": "You Dare Use My Own Spells Against Me, Potter? ",
           "attributeVal": "ციფრული პროდუქტების ტესტირება",
-          "radioGif": "/assets/GIFs/question8/question8gif4.webp"
+          "radioGif": "/assets/GIFs/question8/question8gif3.gif"
         },
         {
-          "answer": "პროფესორი მინერვა მაკგონაგალი",
-          "text": "“Why is it when something happens, it is always you three?” ",
+          "answer": "wesley ძმები",
+          "text": "",
           "attributeVal": "UI/UX დიზაინი",
+          "radioGif": "/assets/GIFs/question8/question8gif4.gif"
+        },
+        {
+          "answer": "დამბლდორი",
+          "text": "",
+          "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question8/question8gif5.gif"
         }
       ]
