@@ -74,8 +74,8 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     setLoading(true);
 
     const { error } = await supabase
-      .from("DATA")
-      .insert([{ name, last_name, email, number, result }]);
+      .from("QuizData")
+      .insert([{ name, last_name, number, email, result }]);
 
     setLoading(false);
 
