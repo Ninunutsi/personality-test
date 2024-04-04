@@ -71,7 +71,7 @@ export const SuccessStyle = styled(Box)({
   alignItems: "center",
 
   "@media (max-width: 768px)": {
-    paddingTop: 150,
+    paddingTop: 120,
     width: "100%",
     height: "100%",
   },
