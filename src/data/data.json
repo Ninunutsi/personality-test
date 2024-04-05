@@ -276,13 +276,13 @@
         },
         {
           "answer": "wesley ძმები",
-          "text": "",
+          "text": "All the Weasleys have red hair, freckles, and more children than they can afford.",
           "attributeVal": "UI/UX დიზაინი",
           "radioGif": "/assets/GIFs/question8/question8gif4.gif"
         },
         {
           "answer": "დამბლდორი",
-          "text": "",
+          "text": "Albus Dumbledore was never proud or vain; he could find something to value in anyone",
           "attributeVal": "Backend დეველოპერი",
           "radioGif": "/assets/GIFs/question8/question8gif5.gif"
         }
