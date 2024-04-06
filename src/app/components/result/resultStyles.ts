@@ -4,7 +4,7 @@ export const GifText: SxProps = {
   textAlign: "center",
   fontSize: "clamp(14px, 3vw, 18px)",
   lineHeight: "28px",
-  padding: "10px 0",
+  padding: "15px 0",
 
   "@media (max-width: 400px)": {
     padding: "5px 0",
