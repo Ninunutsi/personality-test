@@ -101,7 +101,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           width={{ md: 500, sm: 400, xs: "100%" }}
           height={{ md: "auto", sm: "auto", xs: "100%" }}
           p={{ md: 5, sm: 4, xs: 2 }}
-          pt={{ xs: 5 }}
+          pt={{ xs: 1.5 }}
           component="form"
           onSubmit={handleSubmit}
         >
@@ -152,7 +152,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             type="text"
             onChange={handleChange}
           />
-          <Box width={"100%"} mt={4} sx={{ button: { width: "100%" } }}>
+          <Box width={"100%"} mt={2.5} sx={{ button: { width: "100%" } }}>
             <BtnComponent
               text={
                 loading ? (

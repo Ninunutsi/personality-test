@@ -16,15 +16,21 @@ export const QuizHeaderStyle: SxProps = {
 
   "@media (max-width: 400px)": {
     ".text": {
+      gap: "5px",
+
+      span: {
+        fontSize: "16px",
+      },
+    },
+  },
+
+  "@media (max-width: 320px)": {
+    ".text": {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
       gap: 0,
-
-      span: {
-        fontSize: "16px",
-      },
     },
   },
 };

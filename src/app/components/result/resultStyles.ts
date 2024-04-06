@@ -13,7 +13,6 @@ export const GifText: SxProps = {
 };
 
 export const resultMainContainer: SxProps = {
-  marginTop: "1.5rem",
   border: "2px solid black",
   borderRadius: "6px",
 };

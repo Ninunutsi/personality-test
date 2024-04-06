@@ -12,7 +12,7 @@ const QuizHeader: React.FC<QuizHeaderProps> = ({ value, checked, visible }) => {
           className="text"
           sx={{
             fontSize: {
-              xs: "body1.fontSize",
+              xs: "body2.fontSize",
               sm: "body1.fontSize",
               md: "h6.fontSize",
             },
