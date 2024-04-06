@@ -98,7 +98,6 @@ const QuestionForm = () => {
                     <img src={radioGif} alt={question_text} />
                     <Typography
                       variant="body2"
-                      lineHeight={2.5}
                       sx={{ ...GifText }}
                     >
                       {radioText}

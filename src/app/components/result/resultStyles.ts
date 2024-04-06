@@ -3,8 +3,8 @@ import { SxProps } from "@mui/material";
 export const GifText: SxProps = {
   textAlign: "center",
   fontSize: "clamp(14px, 3vw, 18px)",
-  lineHeight: "30px",
-  padding: "20px 0",
+  lineHeight: "28px",
+  padding: "10px 0",
 
   "@media (max-width: 400px)": {
     padding: "5px 0",
