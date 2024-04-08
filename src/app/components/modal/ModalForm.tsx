@@ -115,7 +115,7 @@ const ModalForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               შეიყვანე პირადი მონაცემები და დაელოდე გათამაშებას.
             </Typography>
             <Typography mb={1} variant="h6">
-              გამარჯვებული გამოვლინდება 19 აპრილს.
+              გამარჯვებული გამოვლინდება 18 აპრილს.
             </Typography>
           </Box>
           <Box className="namesInput">
