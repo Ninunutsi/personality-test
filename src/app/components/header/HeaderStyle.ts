@@ -21,6 +21,13 @@ export const HeaderContainer: SxProps = {
   },
 
   "@media (max-width: 1023px)": {
-    padding: "0 40px",
+    padding: "0 30px",
+  },
+
+  "@media (max-width: 400px)": {
+    img: {
+      width: 125,
+      height: 25,
+    },
   },
 };

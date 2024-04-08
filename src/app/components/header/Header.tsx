@@ -10,10 +10,10 @@ const Header = () => {
       <Box sx={{ ...HeaderContainer }}>
         <Link href={"/"}>
           <Image
-            src="/assets/skillwillLogo.svg"
+            src="/assets/skillwillLogo.png"
             alt="SkillwillLogo"
             width={180}
-            height={22}
+            height={35}
           />
         </Link>
       </Box>
