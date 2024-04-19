@@ -4,14 +4,16 @@ import { createClient } from "@supabase/supabase-js";
 import { supabaseKey, supabaseUrl } from '@/api/Api';
 
 interface WinnerProps {
+    id: number,
     name: string,
-    last_name: string
+    last_name: string,
+    number: string
   }
 
   const supabase = createClient(supabaseUrl, supabaseKey);
 
 const Winner: React.FC = () => {
-    const [user, setUser] = useState<WinnerProps>()
+    const [user, setUser] = useState<WinnerProps[]>([])
 
     const fetchData = async () => {
         try {
@@ -23,10 +25,9 @@ const Winner: React.FC = () => {
             throw error;
           }
             
-            setUser({
-              name: data[0]?.name,
-              last_name: data[0].last_name
-            });
+            
+          setUser(data || [])
+            console.log(data)
 
           
         } catch (error: any) {
@@ -57,12 +58,21 @@ const Winner: React.FC = () => {
                     sm: "2.5rem",
                     md: "3.2rem",
                   },
-              }} mb='20px'>გათამაშებაში გამარჯვებულია: </Typography>
-      <Typography variant="h1" sx={{color: "#c4aaf4", fontSize: {
-                  xs: "h3.fontSize",
-                  sm: "h2.fontSize",
-                  md: "h1.fontSize",
-                },}}>{user?.name}  {user?.last_name}</Typography>
+              }} mb='20px'>გათამაშებაში გამარჯვებულები არიან: </Typography>
+    {user.map(({name, last_name, number, id}) => (
+         <div key={id}>
+          <Typography variant="h2" sx={{color: "#c4aaf4", fontSize: {
+            xs: "h4.fontSize",
+            sm: "h3.fontSize",
+            md: "h2.fontSize",
+          },}}>{name} {last_name}</Typography>
+           <Typography variant="h2" sx={{color: "#c4aaf4", fontSize: {
+            xs: "h4.fontSize",
+            sm: "h3.fontSize",
+            md: "h2.fontSize",
+          },}}>{number}</Typography>
+          </div>
+    ))}
         </>
       }
     </Box>
