@@ -15,7 +15,7 @@ interface IUser {
 
 const CountdownTimer: React.FC = () => {
   const [countdown, setCountdown] = useState<number>(0);
-  const [winnerChosen, setWinnerChosen] = useState<boolean>(false);
+  const [winnerChosen, setWinnerChosen] = useState<boolean>(true);
 
   useEffect(() => {
     const targetTime = new Date();
