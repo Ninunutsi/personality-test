@@ -14,10 +14,11 @@ export const StarRotate = keyframes`
 export const ContentBox: SxProps = {
   display: "flex",
   justifyContent: "center",
+  alignItems: "center",
   gap: 4,
   width: "100%",
-  marginTop: "25px",
-  padding: "0 64px 64px",
+  // marginTop: "25px",
+  padding: "65px",
 
   "@media (max-width: 1024px)": {
     flexDirection: "column-reverse",
