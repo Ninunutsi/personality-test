@@ -6,8 +6,8 @@ import CountdownTimer from "../components/countdown-timer";
 const HomePage = () => {
   return (
     <Box>
-      {/* <Starter /> */}
-      <CountdownTimer />
+      <Starter />
+      {/* <CountdownTimer /> */}
     </Box>
   );
 };
