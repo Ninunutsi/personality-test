@@ -17,8 +17,7 @@ export const ContentBox: SxProps = {
   alignItems: "center",
   gap: 4,
   width: "100%",
-  // marginTop: "25px",
-  padding: "65px",
+  padding: "64px",
 
   "@media (max-width: 1024px)": {
     flexDirection: "column-reverse",

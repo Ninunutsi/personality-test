@@ -39,7 +39,7 @@ const Starter = () => {
           <Typography
             maxWidth={{ xs: "100%", sm: 500, md: 560 }}
             fontWeight={700}
-            mb={6}
+            mb={4}
             sx={{
               fontSize: {
                 xs: "h6.fontSize",
@@ -60,7 +60,6 @@ const Starter = () => {
         <Box
           maxWidth={{ lg: "40%", md: "100%", sm: "100%", xs: "100%" }}
           height={{ lg: 250, md: 240, sm: 200, xs: 150 }}
-          // mt={2}
         >
           <img
             src="/assets/GIFs/mainGif.webp"
