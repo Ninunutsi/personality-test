@@ -98,9 +98,9 @@ const Result: React.FC = () => {
                 </Link>
               </Box>
               <Box
-                maxWidth={400}
+                maxWidth={570}
                 width={"100%"}
-                height={{ md: "100%", sm: 300, xs: 200 }}
+                height={{ md: 400, sm: 300, xs: 200 }}
               >
                 <img src={matchingResult.gif} alt="gif" />
               </Box>
