@@ -84,7 +84,7 @@ const Result: React.FC = () => {
         >
           <QuizHeader value={10} visible={false} />
           <Box sx={{ ...resultBoxStyles }} pb={"1rem"} pt={2}>
-            <Typography sx={{ ...resultTypographyStyles }} >
+            <Typography sx={{ ...resultTypographyStyles }}>
               გილოცავ! შენ შეგეფერება {result}
             </Typography>
             <Box
@@ -96,13 +96,6 @@ const Result: React.FC = () => {
                 <Link href={matchingResult?.link} target="_blank">
                   <BtnComponent text={"იყიდე კურსი"} />
                 </Link>
-                <Box onClick={onClick}>
-                  <BtnComponent
-                    text="მოიგე Airpods"
-                    checked={true}
-                    variant={"outlined"}
-                  />
-                </Box>
               </Box>
               <Box
                 maxWidth={400}

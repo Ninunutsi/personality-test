@@ -39,7 +39,7 @@ const Starter = () => {
           <Typography
             maxWidth={{ xs: "100%", sm: 500, md: 560 }}
             fontWeight={700}
-            mb={2}
+            mb={4}
             sx={{
               fontSize: {
                 xs: "h6.fontSize",
@@ -51,34 +51,6 @@ const Starter = () => {
           >
             გაიგე რომელი პროფესია შეგეფერება
           </Typography>
-          <Box
-            mb={2}
-            sx={{ ...TextContent }}
-            maxWidth={{ xs: "100%", sm: "100%", md: 550 }}
-          >
-            <Typography
-              className="Airpods"
-              fontWeight={700}
-              sx={{
-                fontSize: {
-                  xs: "body1.fontSize",
-                  sm: "body1.fontSize",
-                  md: "h6.fontSize",
-                },
-              }}
-            >
-              შეავსე კითხვარი, მიიღე გათამაშებაში მონაწილეობა და მოიგე
-              <span>&nbsp;Airpods</span>
-            </Typography>
-            <Box display={{ lg: "block", md: "none", sm: "none", xs: "none" }}>
-              <Image
-                src={airpods}
-                width={180}
-                height={120}
-                alt="skillwill logo"
-              />
-            </Box>
-          </Box>
           <Box alignSelf={"start"} component="form" sx={{ ...ButtonForm }}>
             <Link href={"/test"}>
               <BtnComponent text="დაიწყე ქვიზი" checked={true} />
@@ -88,7 +60,6 @@ const Starter = () => {
         <Box
           maxWidth={{ lg: "40%", md: "100%", sm: "100%", xs: "100%" }}
           height={{ lg: 250, md: 240, sm: 200, xs: 150 }}
-          mt={2}
         >
           <img
             src="/assets/GIFs/mainGif.webp"
